@@ -1,0 +1,15 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalpacks/core60/report_base8b.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalpacks/core60/report_mined8b.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.18301282051282053,
+      "paired_ci95": [
+        0.1251602564102564,
+        0.2471153846153846
+      ],
+      "groups": 60
+    }
+  ]
+}

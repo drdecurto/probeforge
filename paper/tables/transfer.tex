@@ -1,0 +1,15 @@
+\begin{table}[t]
+\caption{Development112 (1824 prompts): lenient status-and-answer accuracy under two response protocols. Dashes are unreported conditions.}\label{tab:transfer}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrr}
+\toprule
+Checkpoint & Two-key protocol & Four-key protocol\\\midrule
+Qwen3-8B base & 0.343 & 0.326\\
+8B sftv2\_mined\_s1 & 0.220 & 0.656\\
+8B sftv3\_random & -- & 0.703\\
+Qwen3-14B base & 0.575 & --\\
+14B sft14b\_random & 0.491 & --\\
+\bottomrule
+\end{tabular}
+\end{table}

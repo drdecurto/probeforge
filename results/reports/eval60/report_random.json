@@ -1,0 +1,70 @@
+{
+  "synthetic": false,
+  "run_fingerprint": "2d6c93e98aabe10eaefe823934126bf24eba1c181f0ba9c8f037a83225507003",
+  "dataset_hash": "49c2d17a1e65b4736c6e48837a3824fa521ba3e622a29aba54e49ad73061a90e",
+  "expected_examples": 300,
+  "budgets": {
+    "512": {
+      "pass_at_1": 0.2,
+      "missing_requests": 0,
+      "length_stops": 0,
+      "per_language": {
+        "en": 0.2,
+        "es": 0.2,
+        "ca": 0.2,
+        "ar": 0.2,
+        "lb": 0.2
+      },
+      "worst_language": 0.2,
+      "per_view": {
+        "base": 0.0,
+        "paraphrase": 0.0,
+        "distractor": 0.0,
+        "counterfactual": 0.0,
+        "boundary": 1.0
+      },
+      "per_family": {
+        "journey": 0.2,
+        "production": 0.2,
+        "interest": 0.2
+      },
+      "per_status_observed": {
+        "solved": 0.0,
+        "needs_clarification": 1.0,
+        "infeasible": 1.0
+      },
+      "all_views_correct": 0.0,
+      "group_mean_accuracy_ci95": [
+        0.20000000000000004,
+        0.20000000000000004
+      ],
+      "ci_scope": "root-world bootstrap conditional on the included families; not unseen-family uncertainty",
+      "mean_completion_tokens": 63.913333333333334,
+      "token_usage_coverage": 1.0,
+      "mean_request_latency_seconds": 1.9706525354613162,
+      "actual_api_or_generation_attempts": 300,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "total_joules": null,
+      "joules_per_correct_answer": null,
+      "energy_coverage": 0.0,
+      "mean_policy_regret_valid_only": null,
+      "policy_regret_coverage": 0.0,
+      "group_scores": {
+        "969c2acde3ea4203cf508bfc": 0.2,
+        "4bb9ec66c121bd3cefbd3905": 0.2,
+        "b4803e7473d6c095a77d329f": 0.2,
+        "51182cfd062de15d869c37f1": 0.2,
+        "fa99dfef9cd2a501a9b07076": 0.2,
+        "83400982d11c313bb1975253": 0.2,
+        "408c7f64a34c51b24cd83fe7": 0.2,
+        "d96e58e03d768bf53b982fa8": 0.2,
+        "7444ab106feaf26abd824c66": 0.2,
+        "9653e19a0a635fc8129a98dd": 0.2,
+        "07860275b4bffddb220e8ce2": 0.2,
+        "603f5078eaec661ede22a9d9": 0.2
+      },
+      "all_collected_samples": 300
+    }
+  }
+}

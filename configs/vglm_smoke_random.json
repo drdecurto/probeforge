@@ -1,0 +1,33 @@
+{
+ "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/GLM-4.7-Flash",
+ "train_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curricula14b/random/sft_train.jsonl",
+ "validation_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curricula14b/random/sft_validation.jsonl",
+ "output_dir": "/gpfs/scratch/bsc21/bsc021885/cf/runs/glmsmoke_random",
+ "seed": 1,
+ "max_length": 2048,
+ "lora_rank": 16,
+ "lora_alpha": 32,
+ "batch_size": 1,
+ "gradient_accumulation": 32,
+ "learning_rate": 0.0001,
+ "epochs": 1,
+ "quantize": false,
+ "gradient_checkpointing": true,
+ "logging_steps": 1,
+ "eval_steps": 100000,
+ "save_steps": 1000,
+ "device_map": "auto",
+ "max_memory_gib": 56,
+ "target_modules": [
+  "q_a_proj",
+  "q_b_proj",
+  "kv_a_proj_with_mqa",
+  "kv_b_proj",
+  "o_proj",
+  "gate_proj",
+  "up_proj",
+  "down_proj"
+ ],
+ "final_eval": false,
+ "max_steps": 3
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "kind": "tiny random Qwen2.5-VL CPU SFT, frozen vision, processor/adapter reload and generation",
+  "metrics": {
+    "train_runtime": 1.4436,
+    "train_samples_per_second": 0.693,
+    "train_steps_per_second": 0.693,
+    "total_flos": 2085740160.0,
+    "train_loss": 11.906798362731934,
+    "epoch": 0.5,
+    "eval_loss": 11.904448509216309,
+    "eval_runtime": 0.1489,
+    "eval_samples_per_second": 13.431,
+    "eval_steps_per_second": 13.431
+  },
+  "collection": {
+    "new_requests": 2,
+    "previous_requests": 0,
+    "synthetic": false,
+    "output": "/workspace/scratch/5ffc93f81861/checks/tiny_vision1/collected.jsonl"
+  },
+  "not_tested": [
+    "3B CUDA training",
+    "quantized VLM",
+    "real annotated-image gains"
+  ]
+}

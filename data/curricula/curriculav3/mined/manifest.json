@@ -1,0 +1,21 @@
+{
+  "strategy": "mined",
+  "seed": 42,
+  "synthetic_rollouts_allowed": false,
+  "source_hash": "6cd1bb28b6c98e475ab736ddf88f22d7b5d7af4003cc7830d7db03120e48e6be",
+  "rollout_runs": [
+    "f5fc1cf69ac9d3d049d48e30b9a624be912524ed4b7f41034cdabfba87982fc9"
+  ],
+  "training_rows": 8710,
+  "unique_training_examples": 8710,
+  "validation_rows": 4862,
+  "exposure_cycles": 1,
+  "training_sequence_tokens": 2991452,
+  "requested_token_budget": 3000000,
+  "targets": "worked",
+  "token_budget_note": "Full prompt+completion tokens; no padding or GPU-FLOP equivalence implied. Train exactly one epoch.",
+  "preference_counts": {
+    "train": 5751,
+    "validation": 914
+  }
+}

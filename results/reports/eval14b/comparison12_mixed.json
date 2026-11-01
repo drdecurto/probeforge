@@ -1,0 +1,25 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_random.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mixed50.json",
+      "budget": "512",
+      "mean_paired_group_difference": -0.007211538461538449,
+      "paired_ci95": [
+        -0.07772435897435896,
+        0.04567307692307695
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_think100.json",
+      "budget": "512",
+      "mean_paired_group_difference": -0.15625,
+      "paired_ci95": [
+        -0.266025641025641,
+        -0.05689102564102563
+      ],
+      "groups": 12
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=cf-probe-bsccase
+#SBATCH --account=bsc21
+#SBATCH --qos=acc_bsccase
+#SBATCH --partition=acc
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=20
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:02:00
+#SBATCH --output=/gpfs/scratch/bsc21/bsc021885/cf/logs/%x-%j.out
+hostname; date

@@ -1,0 +1,10 @@
+{
+ "json_rows": 5081,
+ "json_tokens": 1500044,
+ "prose_rows": 3445,
+ "prose_tokens": 482585,
+ "gsm_rows": 4002,
+ "gsm_tokens": 750051,
+ "gsm_languages": 13,
+ "gsm_available": 32260
+}

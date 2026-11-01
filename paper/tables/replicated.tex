@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\caption{Replicated transfer and cross-family limits. Mixed-format denotes the v4c mixture; Aya uses its own mined curriculum. Entries are means $\pm$ sample SD for three seeds, or one evaluation where $n=1$. S is whole-response reference similarity; K is secondary key-value match, not exact answer accuracy. MGSM uses strict extraction. Base rows provide matched references; bold means exceed the corresponding base after rounding (not a significance marker).}\label{tab:replicated}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrccccccc}\toprule
+Checkpoint & $n$ & ProbeForge & Raw S & Chat S & Chat K & Belebele & GMMLU & MGSM\\\midrule
+Qwen3-8B base & 1 & 0.036 & 0.354 & 0.445 & 0.457 & 0.856 & 0.710 & 0.805\\
+Qwen3-8B mixed-format & 3 & $\mathbf{0.300}\pm0.042$ & $\mathbf{0.514}\pm0.011$ & $\mathbf{0.565}\pm0.020$ & $\mathbf{0.803}\pm0.025$ & $\mathbf{0.865}\pm0.001$ & $0.705\pm0.001$ & $\mathbf{0.824}\pm0.007$\\
+Qwen3-14B base & 1 & 0.083 & 0.359 & 0.446 & 0.450 & 0.892 & 0.729 & 0.857\\
+Qwen3-14B mixed-format & 3 & $\mathbf{0.384}\pm0.025$ & $\mathbf{0.403}\pm0.004$ & $\mathbf{0.570}\pm0.010$ & $\mathbf{0.859}\pm0.010$ & $0.892\pm0.001$ & $0.724\pm0.002$ & $\mathbf{0.880}\pm0.005$\\
+Phi-4 base & 1 & 0.022 & --- & 0.424 & 0.374 & 0.838 & 0.705 & 0.787\\
+Phi-4 mined & 3 & $\mathbf{0.317}\pm0.058$ & --- & $\mathbf{0.459}\pm0.014$ & $\mathbf{0.620}\pm0.021$ & $\mathbf{0.851}\pm0.005$ & $\mathbf{0.736}\pm0.001$ & $\mathbf{0.823}\pm0.003$\\
+Phi-4-mini base & 1 & 0.050 & 0.505 & 0.513 & 0.576 & 0.761 & 0.581 & 0.723\\
+Phi-4-mini mixed-format & 3 & $\mathbf{0.216}\pm0.018$ & $\mathbf{0.512}\pm0.001$ & $0.490\pm0.011$ & $\mathbf{0.640}\pm0.014$ & $0.761\pm0.002$ & $0.572\pm0.002$ & $0.720\pm0.007$\\
+Aya-8B base & 1 & 0.000 & 0.488 & 0.479 & 0.477 & 0.737 & 0.540 & 0.707\\
+Aya-8B mined & 1 & \textbf{0.080} & 0.464 & \textbf{0.485} & 0.450 & 0.735 & 0.537 & 0.707\\
+Aya-8B mixed-format & 1 & \textbf{0.079} & 0.419 & 0.462 & \textbf{0.486} & 0.732 & \textbf{0.546} & 0.663\\
+\bottomrule\end{tabular}
+\end{table*}

@@ -1,0 +1,75 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_base.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3197115384615385,
+      "paired_ci95": [
+        0.15224358974358973,
+        0.500801282051282
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_random_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.27884615384615385,
+      "paired_ci95": [
+        0.14983974358974358,
+        0.4166666666666667
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_random_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.21153846153846154,
+      "paired_ci95": [
+        0.10897435897435898,
+        0.3501602564102564
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2532051282051282,
+      "paired_ci95": [
+        0.1362179487179487,
+        0.3918269230769231
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31730769230769235,
+      "paired_ci95": [
+        0.1730769230769231,
+        0.47355769230769235
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.27483974358974356,
+      "paired_ci95": [
+        0.1362179487179487,
+        0.4350961538461538
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_translated.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.17147435897435895,
+      "paired_ci95": [
+        0.026442307692307685,
+        0.3405448717948718
+      ],
+      "groups": 12
+    }
+  ]
+}

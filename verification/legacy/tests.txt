@@ -1,0 +1,20 @@
+test_api_contract_cache_and_budget (test_core.CoreTests.test_api_contract_cache_and_budget) ... ok
+test_budget_zero_stops (test_core.CoreTests.test_budget_zero_stops) ... ok
+test_build_collection_branch_and_evaluation (test_core.CoreTests.test_build_collection_branch_and_evaluation) ... ok
+test_counterfactual_worlds_have_identical_prompts (test_core.CoreTests.test_counterfactual_worlds_have_identical_prompts) ... ok
+test_invalid_probe_is_failure (test_core.CoreTests.test_invalid_probe_is_failure) ... ok
+test_oracle_dominates_no_information_on_complete_groups (test_core.CoreTests.test_oracle_dominates_no_information_on_complete_groups) ... ok
+test_parser_rejects_extra_prose_and_bool (test_core.CoreTests.test_parser_rejects_extra_prose_and_bool) ... ok
+test_random_probe_intervention_preserves_cost (test_core.CoreTests.test_random_probe_intervention_preserves_cost) ... ok
+test_rule_arithmetic (test_core.CoreTests.test_rule_arithmetic) ... ok
+test_split_audit_and_reproducibility (test_core.CoreTests.test_split_audit_and_reproducibility) ... ok
+test_training_split_validation_rejects_overlap (test_core.CoreTests.test_training_split_validation_rejects_overlap) ... ok
+test_truth_does_not_change_expert_initial_action (test_core.CoreTests.test_truth_does_not_change_expert_initial_action) ... ok
+test_submission_arguments_without_scheduler (test_slurm.SlurmTests.test_submission_arguments_without_scheduler) ... ok
+test_logps_padding_invariance_and_gradient (test_training_data.EncodingTests.test_logps_padding_invariance_and_gradient) ... ok
+test_prompt_mask_and_eos (test_training_data.EncodingTests.test_prompt_mask_and_eos) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.876s
+
+OK

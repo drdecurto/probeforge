@@ -1,0 +1,7 @@
+series,base,paraphrase,distractor,context_academic,context_business,expansion,boundary,counterfactual
+8B base,0.0,0.0,0.0,0.006,0.0,0.0,0.282,0.0
+8B mined (3 seeds),0.271,0.303,0.293,0.303,0.282,0.286,0.795,0.009
+14B base,0.032,0.077,0.045,0.064,0.064,0.038,0.333,0.006
+14B random (3 seeds),0.415,0.408,0.412,0.412,0.404,0.406,0.803,0.043
+"8B mined, diag60",0.264,0.287,0.274,0.273,0.259,0.278,0.444,0.319
+"14B random, diag60",0.382,0.369,0.383,0.365,0.363,0.379,0.5,0.468

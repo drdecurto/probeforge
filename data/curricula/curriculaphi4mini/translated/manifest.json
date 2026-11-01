@@ -1,0 +1,21 @@
+{
+  "strategy": "translated",
+  "seed": 42,
+  "synthetic_rollouts_allowed": false,
+  "source_hash": "1b2633b539ed39fa6490692a1900dbebac3659535f2347a3c9674cf2d2b2a3f8",
+  "rollout_runs": [
+    "b02d14a75c189a25b8befde6c45dd1fa224ee95ba6d35919fc94d26b4d48e56b"
+  ],
+  "training_rows": 10205,
+  "unique_training_examples": 2600,
+  "validation_rows": 4160,
+  "exposure_cycles": 4,
+  "training_sequence_tokens": 2998751,
+  "requested_token_budget": 3000000,
+  "targets": "worked",
+  "token_budget_note": "Full prompt+completion tokens; no padding or GPU-FLOP equivalence implied. Train exactly one epoch.",
+  "preference_counts": {
+    "train": 716,
+    "validation": 1109
+  }
+}

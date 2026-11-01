@@ -1,0 +1,53 @@
+34c34,37
+<     import ray
+---
+>     try:
+>         import ray
+>     except ModuleNotFoundError:
+>         ray = None  # only needed for data_parallel_size > 1
+37,40c40,52
+<     from vllm.transformers_utils.tokenizer import get_tokenizer
+<     from vllm.utils import get_open_port
+< 
+<     if parse_version(version("vllm")) >= parse_version("0.8.3"):
+---
+>     try:
+>         from vllm.transformers_utils.tokenizer import get_tokenizer
+>     except ImportError:  # vLLM >= 0.2x moved it; fall back to HF (patched for vllm 0.32)
+>         def get_tokenizer(name, *a, **kw):
+>             from transformers import AutoTokenizer
+>             return AutoTokenizer.from_pretrained(name, trust_remote_code=kw.get("trust_remote_code", False), revision=kw.get("revision") or kw.get("tokenizer_revision"))
+>     try:
+>         from vllm.utils import get_open_port
+>     except ImportError:
+>         def get_open_port():
+>             import socket
+>             s = socket.socket(); s.bind(("", 0)); port = s.getsockname()[1]; s.close(); return port
+>     try:
+41a54,56
+>     except ImportError:
+>         def resolve_hf_chat_template(**kw):
+>             return None
+50a66,75
+> def _filter_engine_args(kw):  # patched for vllm 0.32: drop kwargs EngineArgs no longer accepts (e.g. swap_space)
+>     import dataclasses
+>     from vllm.engine.arg_utils import EngineArgs
+>     ok = {f.name for f in dataclasses.fields(EngineArgs)}
+>     drop = [k for k in kw if k not in ok]
+>     if drop:
+>         eval_logger.warning(f"dropping vLLM args not accepted by this vLLM: {drop}")
+>     return {k: v for k, v in kw.items() if k in ok}
+> 
+> 
+79c104
+<         llm = LLM(**model_args)
+---
+>         llm = LLM(**_filter_engine_args(model_args))
+185c210
+<             self.model = LLM(**self.model_args)
+---
+>             self.model = LLM(**_filter_engine_args(self.model_args))
+388c413
+<                 llm = LLM(**model_args)
+---
+>                 llm = LLM(**_filter_engine_args(model_args))

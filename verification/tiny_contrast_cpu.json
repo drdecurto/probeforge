@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "kind": "tiny random Qwen3 CPU execution with contrast curriculum",
+  "sft": {
+    "train_runtime": 0.1525,
+    "train_samples_per_second": 26.229,
+    "train_steps_per_second": 13.114,
+    "total_flos": 135365760.0,
+    "train_loss": 6.919670820236206,
+    "epoch": 0.5,
+    "eval_loss": 6.918429374694824,
+    "eval_runtime": 0.0241,
+    "eval_samples_per_second": 332.199,
+    "eval_steps_per_second": 332.199
+  },
+  "resumed_sft": {
+    "train_runtime": 0.0744,
+    "train_samples_per_second": 80.626,
+    "train_steps_per_second": 40.313,
+    "total_flos": 202298880.0,
+    "train_loss": 2.3065017064412436,
+    "epoch": 0.75,
+    "eval_loss": 6.918429374694824,
+    "eval_runtime": 0.0245,
+    "eval_samples_per_second": 326.99,
+    "eval_steps_per_second": 326.99
+  },
+  "dpo": {
+    "train_runtime": 0.224,
+    "train_samples_per_second": 17.858,
+    "train_steps_per_second": 8.929,
+    "total_flos": 0.0,
+    "train_loss": 0.6931471824645996,
+    "epoch": 1.0,
+    "eval_loss": 0.6929534673690796,
+    "eval_runtime": 0.0274,
+    "eval_samples_per_second": 145.753,
+    "eval_steps_per_second": 145.753
+  },
+  "local_collection": {
+    "new_requests": 2,
+    "previous_requests": 0,
+    "synthetic": false,
+    "output": "/workspace/scratch/5ffc93f81861/checks/tiny_contrast_final/tiny_local.jsonl"
+  },
+  "merged_export": true,
+  "not_tested": [
+    "8B CUDA training",
+    "4-bit CUDA training",
+    "MareNostrum submission",
+    "live Nebius API",
+    "VLM GPU training",
+    "capability gains"
+  ]
+}

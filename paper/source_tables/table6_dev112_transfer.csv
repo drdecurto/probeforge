@@ -1,0 +1,6 @@
+model,pack_protocol_2key_lenient,native_protocol_4key_lenient
+Qwen3-8B base,0.343,0.326
+8B sftv2_mined_s1,0.22,0.656
+8B sftv3_random,,0.703
+Qwen3-14B base,0.575,
+14B sft14b_random,0.491,

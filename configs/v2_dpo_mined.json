@@ -1,0 +1,21 @@
+{
+ "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/Qwen3-8B",
+ "train_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curriculav2/mined_dpo/reference_train.jsonl",
+ "validation_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curriculav2/mined_dpo/reference_validation.jsonl",
+ "output_dir": "/gpfs/scratch/bsc21/bsc021885/cf/runs/dpov2_mined",
+ "seed": 42,
+ "max_length": 2048,
+ "lora_rank": 16,
+ "lora_alpha": 32,
+ "batch_size": 1,
+ "gradient_accumulation": 32,
+ "learning_rate": 5e-06,
+ "epochs": 1,
+ "quantize": false,
+ "gradient_checkpointing": true,
+ "logging_steps": 5,
+ "eval_steps": 50,
+ "save_steps": 50,
+ "init_adapter": "/gpfs/scratch/bsc21/bsc021885/cf/runs/sftv2_mined_s1",
+ "beta": 0.1
+}

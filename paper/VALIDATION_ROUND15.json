@@ -1,0 +1,670 @@
+{
+  "secondary_checks": [
+    {
+      "protocol": "out",
+      "model": "phi-4-base",
+      "key_value_match": 0.09511068641503424
+    },
+    {
+      "protocol": "out",
+      "model": "phi-4-mini-instruct",
+      "key_value_match": 0.5478791739661305
+    },
+    {
+      "protocol": "out",
+      "model": "phi-4-mini-mined",
+      "key_value_match": 0.4182778574082922
+    },
+    {
+      "protocol": "out",
+      "model": "phi-4-mini-random",
+      "key_value_match": 0.36341243297765036
+    },
+    {
+      "protocol": "out",
+      "model": "phi-4-mini-v4",
+      "key_value_match": 0.573822795561926
+    },
+    {
+      "protocol": "out",
+      "model": "phi-4-mini-v4b",
+      "key_value_match": 0.5986622073578596
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-14b-base",
+      "key_value_match": 0.3738440303657695
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-14b-distill",
+      "key_value_match": 0.39569995222169135
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-14b-mined",
+      "key_value_match": 0.41461485374528856
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-14b-mixed50",
+      "key_value_match": 0.5344163083293518
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-14b-random",
+      "key_value_match": 0.420958751393534
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-14b-v3mined",
+      "key_value_match": 0.427238944630249
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-8b-base",
+      "key_value_match": 0.3063173541434411
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-8b-mined",
+      "key_value_match": 0.5249349684132293
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-8b-v3random",
+      "key_value_match": 0.5100652970218188
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-8b-v4",
+      "key_value_match": 0.5051653660349312
+    },
+    {
+      "protocol": "out",
+      "model": "qwen3-8b-v4b",
+      "key_value_match": 0.7171311780007432
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-base",
+      "key_value_match": 0.3741253915166959
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-mined",
+      "key_value_match": 0.6329086372564633
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-mini-instruct",
+      "key_value_match": 0.5760524499654934
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-mini-mined",
+      "key_value_match": 0.6369220151828847
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-mini-random",
+      "key_value_match": 0.623549397462441
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-mini-v4",
+      "key_value_match": 0.5456707543664066
+    },
+    {
+      "protocol": "out_chat",
+      "model": "phi-4-mini-v4b",
+      "key_value_match": 0.6414344109996284
+    },
+    {
+      "protocol": "out_chat",
+      "model": "qwen3-14b-base",
+      "key_value_match": 0.45025216329564155
+    },
+    {
+      "protocol": "out_chat",
+      "model": "qwen3-14b-random",
+      "key_value_match": 0.6413123108775283
+    },
+    {
+      "protocol": "out_chat",
+      "model": "qwen3-8b-base",
+      "key_value_match": 0.4572808833678399
+    },
+    {
+      "protocol": "out_chat",
+      "model": "qwen3-8b-mined",
+      "key_value_match": 0.7457981631894676
+    },
+    {
+      "protocol": "out_chat",
+      "model": "qwen3-8b-v4",
+      "key_value_match": 0.560540425757817
+    },
+    {
+      "protocol": "out_chat",
+      "model": "qwen3-8b-v4b",
+      "key_value_match": 0.8337367946063599
+    }
+  ],
+  "primary_verified_files": 390,
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261023,
+    "cluster": "problem index across all languages and three responses",
+    "intervals": {
+      "('out', 'qwen3-8b-v4b')": [
+        0.1664548875703868,
+        0.14122303695472324,
+        0.19219084285079976
+      ],
+      "('out', 'phi-4-mini-v4b')": [
+        0.01929494132161181,
+        -0.004603563943206536,
+        0.043394837692951216
+      ],
+      "('out_chat', 'qwen3-8b-v4b')": [
+        0.13979642926900662,
+        0.10582286447305235,
+        0.17497157135737643
+      ],
+      "('out_chat', 'phi-4-mini-v4b')": [
+        -0.030389251230649988,
+        -0.06306915753612033,
+        0.0006752252543710478
+      ]
+    }
+  },
+  "standard_mean_checks": [
+    [
+      "qwen3-14b-base",
+      "bele_mean",
+      0.8915740740740741
+    ],
+    [
+      "qwen3-14b-base",
+      "gmmlu_mean",
+      0.7290625
+    ],
+    [
+      "qwen3-14b-base",
+      "mgsm_mean",
+      0.8586666666666667
+    ],
+    [
+      "qwen3-14b-base",
+      "mgsmstrict_mean",
+      0.8566666666666667
+    ],
+    [
+      "qwen3-14b-random",
+      "bele_mean",
+      0.8901851851851852
+    ],
+    [
+      "qwen3-14b-random",
+      "gmmlu_mean",
+      0.72
+    ],
+    [
+      "qwen3-14b-random",
+      "mgsm_mean",
+      0.8526666666666667
+    ],
+    [
+      "qwen3-14b-random",
+      "mgsmstrict_mean",
+      0.8713333333333333
+    ],
+    [
+      "qwen3-14b-mined",
+      "bele_mean",
+      0.89
+    ],
+    [
+      "qwen3-14b-mined",
+      "gmmlu_mean",
+      0.7209375
+    ],
+    [
+      "qwen3-14b-mined",
+      "mgsm_mean",
+      0.8593333333333333
+    ],
+    [
+      "qwen3-14b-mined",
+      "mgsmstrict_mean",
+      0.8826666666666667
+    ],
+    [
+      "qwen3-14b-v3mined",
+      "bele_mean",
+      0.8890740740740741
+    ],
+    [
+      "qwen3-14b-v3mined",
+      "gmmlu_mean",
+      0.718125
+    ],
+    [
+      "qwen3-14b-v3mined",
+      "mgsm_mean",
+      0.864
+    ],
+    [
+      "qwen3-14b-v3mined",
+      "mgsmstrict_mean",
+      0.8833333333333333
+    ],
+    [
+      "qwen3-14b-distill",
+      "bele_mean",
+      0.8891666666666667
+    ],
+    [
+      "qwen3-14b-distill",
+      "gmmlu_mean",
+      0.721875
+    ],
+    [
+      "qwen3-14b-distill",
+      "mgsm_mean",
+      0.8633333333333333
+    ],
+    [
+      "qwen3-14b-distill",
+      "mgsmstrict_mean",
+      0.872
+    ],
+    [
+      "qwen3-14b-mixed50",
+      "bele_mean",
+      0.893425925925926
+    ],
+    [
+      "qwen3-14b-mixed50",
+      "gmmlu_mean",
+      0.719375
+    ],
+    [
+      "qwen3-14b-mixed50",
+      "mgsm_mean",
+      0.7693333333333333
+    ],
+    [
+      "qwen3-14b-mixed50",
+      "mgsmstrict_mean",
+      0.8786666666666667
+    ],
+    [
+      "qwen3-8b-base",
+      "bele_mean",
+      0.8559259259259259
+    ],
+    [
+      "qwen3-8b-base",
+      "gmmlu_mean",
+      0.7096875
+    ],
+    [
+      "qwen3-8b-base",
+      "mgsm_mean",
+      0.77
+    ],
+    [
+      "qwen3-8b-base",
+      "mgsmstrict_mean",
+      0.8053333333333333
+    ],
+    [
+      "qwen3-8b-mined",
+      "bele_mean",
+      0.8621296296296296
+    ],
+    [
+      "qwen3-8b-mined",
+      "gmmlu_mean",
+      0.7078125
+    ],
+    [
+      "qwen3-8b-mined",
+      "mgsm_mean",
+      0.7753333333333333
+    ],
+    [
+      "qwen3-8b-mined",
+      "mgsmstrict_mean",
+      0.844
+    ],
+    [
+      "qwen3-8b-v3random",
+      "bele_mean",
+      0.86
+    ],
+    [
+      "qwen3-8b-v3random",
+      "gmmlu_mean",
+      0.7096875
+    ],
+    [
+      "qwen3-8b-v3random",
+      "mgsm_mean",
+      0.736
+    ],
+    [
+      "qwen3-8b-v3random",
+      "mgsmstrict_mean",
+      0.8553333333333333
+    ],
+    [
+      "phi-4-base",
+      "bele_mean",
+      0.8380555555555556
+    ],
+    [
+      "phi-4-base",
+      "gmmlu_mean",
+      0.7053125
+    ],
+    [
+      "phi-4-base",
+      "mgsm_mean",
+      0.7993333333333333
+    ],
+    [
+      "phi-4-base",
+      "mgsmstrict_mean",
+      0.7873333333333333
+    ],
+    [
+      "phi-4-mined",
+      "bele_mean",
+      0.8560185185185185
+    ],
+    [
+      "phi-4-mined",
+      "gmmlu_mean",
+      0.7375
+    ],
+    [
+      "phi-4-mined",
+      "mgsm_mean",
+      0.8453333333333333
+    ],
+    [
+      "phi-4-mined",
+      "mgsmstrict_mean",
+      0.8253333333333334
+    ],
+    [
+      "phi-4-mini-instruct",
+      "bele_mean",
+      0.7606481481481482
+    ],
+    [
+      "phi-4-mini-instruct",
+      "gmmlu_mean",
+      0.5806250000000001
+    ],
+    [
+      "phi-4-mini-instruct",
+      "mgsm_mean",
+      0.736
+    ],
+    [
+      "phi-4-mini-instruct",
+      "mgsmstrict_mean",
+      0.7226666666666667
+    ],
+    [
+      "llama-3.1-8b-instruct",
+      "bele_mean",
+      0.7962037037037037
+    ],
+    [
+      "llama-3.1-8b-instruct",
+      "gmmlu_mean",
+      0.60375
+    ],
+    [
+      "llama-3.1-8b-instruct",
+      "mgsm_mean",
+      0.6893333333333334
+    ],
+    [
+      "llama-3.1-8b-instruct",
+      "mgsmstrict_mean",
+      0.682
+    ],
+    [
+      "gemma-3-12b-it",
+      "bele_mean",
+      0.8842592592592593
+    ],
+    [
+      "gemma-3-12b-it",
+      "gmmlu_mean",
+      0.713125
+    ],
+    [
+      "gemma-3-12b-it",
+      "mgsm_mean",
+      0.8273333333333334
+    ],
+    [
+      "gemma-3-12b-it",
+      "mgsmstrict_mean",
+      0.8160000000000001
+    ],
+    [
+      "salamandra-7b-instruct",
+      "bele_mean",
+      0.5972222222222222
+    ],
+    [
+      "salamandra-7b-instruct",
+      "gmmlu_mean",
+      0.511875
+    ],
+    [
+      "salamandra-7b-instruct",
+      "mgsm_mean",
+      0.23933333333333334
+    ],
+    [
+      "salamandra-7b-instruct",
+      "mgsmstrict_mean",
+      0.22
+    ],
+    [
+      "qwen2.5-7b-instruct",
+      "bele_mean",
+      0.8257407407407408
+    ],
+    [
+      "qwen2.5-7b-instruct",
+      "gmmlu_mean",
+      0.6896875
+    ],
+    [
+      "qwen2.5-7b-instruct",
+      "mgsm_mean",
+      0.74
+    ],
+    [
+      "qwen2.5-7b-instruct",
+      "mgsmstrict_mean",
+      0.74
+    ],
+    [
+      "aya-expanse-8b",
+      "bele_mean",
+      0.736574074074074
+    ],
+    [
+      "aya-expanse-8b",
+      "gmmlu_mean",
+      0.54
+    ],
+    [
+      "aya-expanse-8b",
+      "mgsm_mean",
+      0.708
+    ],
+    [
+      "aya-expanse-8b",
+      "mgsmstrict_mean",
+      0.7066666666666667
+    ],
+    [
+      "eurollm-9b-instruct",
+      "bele_mean",
+      0.6980555555555555
+    ],
+    [
+      "eurollm-9b-instruct",
+      "gmmlu_mean",
+      0.593125
+    ],
+    [
+      "eurollm-9b-instruct",
+      "mgsm_mean",
+      0.5493333333333333
+    ],
+    [
+      "eurollm-9b-instruct",
+      "mgsmstrict_mean",
+      0.544
+    ],
+    [
+      "phi-4-mini-mined",
+      "bele_mean",
+      0.7488888888888889
+    ],
+    [
+      "phi-4-mini-mined",
+      "gmmlu_mean",
+      0.5753125
+    ],
+    [
+      "phi-4-mini-mined",
+      "mgsm_mean",
+      0.7113333333333334
+    ],
+    [
+      "phi-4-mini-mined",
+      "mgsmstrict_mean",
+      0.7046666666666667
+    ],
+    [
+      "phi-4-mini-random",
+      "bele_mean",
+      0.7372222222222222
+    ],
+    [
+      "phi-4-mini-random",
+      "gmmlu_mean",
+      0.5815625
+    ],
+    [
+      "phi-4-mini-random",
+      "mgsm_mean",
+      0.7166666666666667
+    ],
+    [
+      "phi-4-mini-random",
+      "mgsmstrict_mean",
+      0.71
+    ],
+    [
+      "qwen3-8b-v4",
+      "bele_mean",
+      0.8622222222222222
+    ],
+    [
+      "qwen3-8b-v4",
+      "gmmlu_mean",
+      0.701875
+    ],
+    [
+      "qwen3-8b-v4",
+      "mgsm_mean",
+      0.79
+    ],
+    [
+      "qwen3-8b-v4",
+      "mgsmstrict_mean",
+      0.8360000000000001
+    ],
+    [
+      "phi-4-mini-v4",
+      "bele_mean",
+      0.7500925925925926
+    ],
+    [
+      "phi-4-mini-v4",
+      "gmmlu_mean",
+      0.5621875000000001
+    ],
+    [
+      "phi-4-mini-v4",
+      "mgsm_mean",
+      0.7586666666666666
+    ],
+    [
+      "phi-4-mini-v4",
+      "mgsmstrict_mean",
+      0.7553333333333333
+    ],
+    [
+      "qwen3-8b-v4b",
+      "bele_mean",
+      0.8687037037037038
+    ],
+    [
+      "qwen3-8b-v4b",
+      "gmmlu_mean",
+      0.7075
+    ],
+    [
+      "qwen3-8b-v4b",
+      "mgsm_mean",
+      0.606
+    ],
+    [
+      "qwen3-8b-v4b",
+      "mgsmstrict_mean",
+      0.8160000000000001
+    ],
+    [
+      "phi-4-mini-v4b",
+      "bele_mean",
+      0.7641666666666667
+    ],
+    [
+      "phi-4-mini-v4b",
+      "gmmlu_mean",
+      0.5659375
+    ],
+    [
+      "phi-4-mini-v4b",
+      "mgsm_mean",
+      0.7266666666666667
+    ],
+    [
+      "phi-4-mini-v4b",
+      "mgsmstrict_mean",
+      0.7186666666666667
+    ]
+  ],
+  "declarations_preserved": true,
+  "pdf_pages": 28,
+  "latex_undefined_references": 0,
+  "latex_overfull_boxes": 0,
+  "known_font_warnings": "Two inherited wasy bold substitutions",
+  "visual_review": "All pages reviewed; new charts, tables and appendix inspected after layout changes"
+}

@@ -1,0 +1,70 @@
+{
+  "synthetic": false,
+  "run_fingerprint": "bb59f45a08bffa5a8500a0dae7fd778bbc061bb26cbc7950886b6363342b4ed3",
+  "dataset_hash": "49c2d17a1e65b4736c6e48837a3824fa521ba3e622a29aba54e49ad73061a90e",
+  "expected_examples": 300,
+  "budgets": {
+    "512": {
+      "pass_at_1": 0.05333333333333334,
+      "missing_requests": 0,
+      "length_stops": 3,
+      "per_language": {
+        "en": 0.06666666666666667,
+        "es": 0.06666666666666667,
+        "ca": 0.06666666666666667,
+        "ar": 0.06666666666666667,
+        "lb": 0.0
+      },
+      "worst_language": 0.0,
+      "per_view": {
+        "base": 0.0,
+        "paraphrase": 0.0,
+        "distractor": 0.0,
+        "counterfactual": 0.0,
+        "boundary": 0.26666666666666666
+      },
+      "per_family": {
+        "journey": 0.0,
+        "production": 0.16,
+        "interest": 0.0
+      },
+      "per_status_observed": {
+        "solved": 0.0,
+        "needs_clarification": 0.0,
+        "infeasible": 0.8
+      },
+      "all_views_correct": 0.0,
+      "group_mean_accuracy_ci95": [
+        0.013333333333333334,
+        0.10666666666666667
+      ],
+      "ci_scope": "root-world bootstrap conditional on the included families; not unseen-family uncertainty",
+      "mean_completion_tokens": 187.54333333333332,
+      "token_usage_coverage": 1.0,
+      "mean_request_latency_seconds": 3.3276339369967656,
+      "actual_api_or_generation_attempts": 300,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "total_joules": null,
+      "joules_per_correct_answer": null,
+      "energy_coverage": 0.0,
+      "mean_policy_regret_valid_only": null,
+      "policy_regret_coverage": 0.0,
+      "group_scores": {
+        "969c2acde3ea4203cf508bfc": 0.0,
+        "4bb9ec66c121bd3cefbd3905": 0.16,
+        "b4803e7473d6c095a77d329f": 0.0,
+        "51182cfd062de15d869c37f1": 0.0,
+        "fa99dfef9cd2a501a9b07076": 0.16,
+        "83400982d11c313bb1975253": 0.0,
+        "408c7f64a34c51b24cd83fe7": 0.0,
+        "d96e58e03d768bf53b982fa8": 0.16,
+        "7444ab106feaf26abd824c66": 0.0,
+        "9653e19a0a635fc8129a98dd": 0.0,
+        "07860275b4bffddb220e8ce2": 0.16,
+        "603f5078eaec661ede22a9d9": 0.0
+      },
+      "all_collected_samples": 300
+    }
+  }
+}

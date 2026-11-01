@@ -1,0 +1,158 @@
+[
+  {
+    "input": {
+      "family": "production",
+      "group_id": "4bb9ec66c121bd3cefbd3905",
+      "id": "9c8b832b114341c5e18e1ce7",
+      "kind": "math",
+      "language": "en",
+      "prompt": [
+        {
+          "content": "Solve the problem using the stated assumptions. Return only JSON with status, answer, facts, and explanation. Copy the interpreted facts into facts. Use exact rational strings for numbers. If essential information is missing, use needs_clarification; if no feasible solution exists, infeasible; if the objective has no finite maximum, unbounded. Otherwise use solved. Explain briefly in English. Missing fields are shown as ?. For non-solved statuses answer must be {}.",
+          "role": "system"
+        },
+        {
+          "content": "Choose nonnegative integers x,y with 2*x+3*y<=38 and x+y>=0. Maximize 50*x+4*y. Break profit ties by smallest x, then smallest y.\nJSON answer keys: profit, x, y. JSON facts keys: capacity, profit_x, profit_y, minimum.\nCanonical facts units: km, h, Wh, W. Missing facts: null.",
+          "role": "user"
+        }
+      ],
+      "semantic_id": "4bb9ec66c121bd3cefbd3905:base",
+      "source": "authored_generator_v2",
+      "split": "test",
+      "view": "base",
+      "world": {
+        "facts": {
+          "capacity": 38,
+          "minimum": 0,
+          "profit_x": 50,
+          "profit_y": 4
+        },
+        "family": "production"
+      }
+    },
+    "rollout": {
+      "attempts": [
+        {
+          "seconds": 4.375068870023824,
+          "status": "ok"
+        }
+      ],
+      "budget": 512,
+      "elapsed_seconds": 4.376947795972228,
+      "energy": {
+        "joules": null,
+        "method": "unavailable"
+      },
+      "example_hash": "7d7b6d9542e87e894fb122f52b6153f75ea8fbd12eb19c3f7f542c4a40aac75b",
+      "finish_reason": "stop",
+      "generation_request_seconds": 4.37638703599805,
+      "group_id": "4bb9ec66c121bd3cefbd3905",
+      "id": "9c8b832b114341c5e18e1ce7",
+      "request_id": "407016ffceef867ba54f27027e4c623f4feb67c844783100411a14da27bdd4c0",
+      "response": "{\"facts\":{\"capacity\":\"38\",\"profit_x\":\"50\",\"profit_y\":\"4\",\"minimum\":\"0\"},\"explanation\":\"maximize 50*x + 4*y with 2*x + 3*y <= 38, x >= 0, y >= 0: optimum at x = 19, y = 0 -> profit = 50*19 + 4*0 = 950. The result follows from the stated data and constraints.\",\"status\":\"solved\",\"answer\":{\"profit\":\"950\",\"x\":\"19\",\"y\":\"0\"}}",
+      "run_fingerprint": "45f9e4012c31ca7a8270f2cd6d9022cde8d166665214f01a419a2394361a32c3",
+      "sample": 0,
+      "seed": 2124271388,
+      "split": "test",
+      "synthetic": false,
+      "usage": {
+        "completion_tokens": 124,
+        "prompt_tokens": 194,
+        "thinking_tokens": null
+      },
+      "verification": {
+        "answer_correct": true,
+        "correct": true,
+        "expected_status": "solved",
+        "explanation_verified": false,
+        "facts_correct": true,
+        "reason": "verified",
+        "semantic_correct_before_completion_gate": true,
+        "status_correct": true
+      }
+    },
+    "enumerated_optimum": {
+      "profit": 950,
+      "x": 19,
+      "y": 0
+    }
+  },
+  {
+    "input": {
+      "family": "production",
+      "group_id": "4bb9ec66c121bd3cefbd3905",
+      "id": "dd08bee462744dce5462121f",
+      "kind": "math",
+      "language": "en",
+      "prompt": [
+        {
+          "content": "Solve the problem using the stated assumptions. Return only JSON with status, answer, facts, and explanation. Copy the interpreted facts into facts. Use exact rational strings for numbers. If essential information is missing, use needs_clarification; if no feasible solution exists, infeasible; if the objective has no finite maximum, unbounded. Otherwise use solved. Explain briefly in English. Missing fields are shown as ?. For non-solved statuses answer must be {}.",
+          "role": "system"
+        },
+        {
+          "content": "Choose nonnegative integers x,y with 2*x+3*y<=41 and x+y>=0. Maximize 50*x+4*y. Break profit ties by smallest x, then smallest y.\nJSON answer keys: profit, x, y. JSON facts keys: capacity, profit_x, profit_y, minimum.\nCanonical facts units: km, h, Wh, W. Missing facts: null.",
+          "role": "user"
+        }
+      ],
+      "semantic_id": "4bb9ec66c121bd3cefbd3905:changed",
+      "source": "authored_generator_v2",
+      "split": "test",
+      "view": "counterfactual",
+      "world": {
+        "facts": {
+          "capacity": "41",
+          "minimum": 0,
+          "profit_x": 50,
+          "profit_y": 4
+        },
+        "family": "production"
+      }
+    },
+    "rollout": {
+      "attempts": [
+        {
+          "seconds": 4.354229228978511,
+          "status": "ok"
+        }
+      ],
+      "budget": 512,
+      "elapsed_seconds": 4.356212813989259,
+      "energy": {
+        "joules": null,
+        "method": "unavailable"
+      },
+      "example_hash": "f46bae7ce88a2260c74d8957b52679f1ee099f2acf3b221eac7c3492c7c41c4e",
+      "finish_reason": "stop",
+      "generation_request_seconds": 4.355636976019014,
+      "group_id": "4bb9ec66c121bd3cefbd3905",
+      "id": "dd08bee462744dce5462121f",
+      "request_id": "a474b01454438dd4cdb57e44f254859c16a12c53046e69103eb51477117fa04a",
+      "response": "{\"facts\":{\"capacity\":\"41\",\"profit_x\":\"50\",\"profit_y\":\"4\",\"minimum\":\"0\"},\"explanation\":\"maximize 50*x + 4*y with 2*x + 3*y <= 41, x >= 0, y >= 0: optimum at x = 20, y = 1 -> 50*20 + 4*1 = 1004. The result follows from the stated data and constraints.\",\"status\":\"solved\",\"answer\":{\"profit\":\"1004\",\"x\":\"20\",\"y\":\"1\"}}",
+      "run_fingerprint": "45f9e4012c31ca7a8270f2cd6d9022cde8d166665214f01a419a2394361a32c3",
+      "sample": 0,
+      "seed": 1601075771,
+      "split": "test",
+      "synthetic": false,
+      "usage": {
+        "completion_tokens": 124,
+        "prompt_tokens": 194,
+        "thinking_tokens": null
+      },
+      "verification": {
+        "answer_correct": false,
+        "correct": false,
+        "expected_status": "solved",
+        "explanation_verified": false,
+        "facts_correct": true,
+        "reason": "semantic_mismatch",
+        "semantic_correct_before_completion_gate": false,
+        "status_correct": true
+      }
+    },
+    "enumerated_optimum": {
+      "profit": 1000,
+      "x": 20,
+      "y": 0
+    }
+  }
+]

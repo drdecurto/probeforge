@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "kind": "tiny random Qwen3 CPU software smoke test",
+  "sft": {
+    "train_runtime": 0.3137,
+    "train_samples_per_second": 12.751,
+    "train_steps_per_second": 6.375,
+    "total_flos": 250010880.0,
+    "train_loss": 6.226932525634766,
+    "epoch": 0.5,
+    "eval_loss": 6.225539207458496,
+    "eval_runtime": 0.0683,
+    "eval_samples_per_second": 117.14,
+    "eval_steps_per_second": 117.14
+  },
+  "resumed_sft": {
+    "train_runtime": 0.1358,
+    "train_samples_per_second": 44.194,
+    "train_steps_per_second": 22.097,
+    "total_flos": 376243200.0,
+    "train_loss": 2.08268133799235,
+    "epoch": 0.75,
+    "eval_loss": 6.225539207458496,
+    "eval_runtime": 0.0542,
+    "eval_samples_per_second": 147.737,
+    "eval_steps_per_second": 147.737
+  },
+  "dpo": {
+    "train_runtime": 0.4707,
+    "train_samples_per_second": 8.498,
+    "train_steps_per_second": 4.249,
+    "total_flos": 0.0,
+    "train_loss": 0.6931471824645996,
+    "epoch": 0.5,
+    "eval_loss": 0.6932878494262695,
+    "eval_runtime": 0.1115,
+    "eval_samples_per_second": 71.756,
+    "eval_steps_per_second": 71.756
+  },
+  "adapter_reload_generated_tokens": 8,
+  "merged_export": true,
+  "not_tested": [
+    "8B CUDA training",
+    "4-bit CUDA",
+    "MareNostrum Slurm",
+    "live Nebius",
+    "capability improvement"
+  ]
+}

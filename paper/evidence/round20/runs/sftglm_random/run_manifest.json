@@ -1,0 +1,47 @@
+{
+  "config": {
+    "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/GLM-4.7-Flash",
+    "train_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curricula14b/random/sft_train.jsonl",
+    "validation_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curricula14b/random/sft_validation.jsonl",
+    "output_dir": "/gpfs/scratch/bsc21/bsc021885/cf/runs/sftglm_random",
+    "seed": 1,
+    "max_length": 2048,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "batch_size": 1,
+    "gradient_accumulation": 32,
+    "learning_rate": 0.0001,
+    "epochs": 1,
+    "quantize": false,
+    "gradient_checkpointing": true,
+    "logging_steps": 1,
+    "eval_steps": 100000,
+    "save_steps": 25,
+    "device_map": "auto",
+    "max_memory_gib": 56,
+    "target_modules": [
+      "q_a_proj",
+      "q_b_proj",
+      "kv_a_proj_with_mqa",
+      "kv_b_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "final_eval": false
+  },
+  "stage": "sft",
+  "versions": {
+    "torch": "2.13.0",
+    "transformers": "5.19.0",
+    "peft": "0.18.1",
+    "accelerate": "1.15.0"
+  },
+  "train_sha256": "4df0dcf5189f38f149404d3efeb9a2f5c66fa4fe097637fc18907cc6cb9f11ec",
+  "validation_sha256": "a721fca8e27aef112d542fc6e07d6b57a1b2c6070356d7bcea50ef9cb810e1d3",
+  "world_size": 1,
+  "effective_batch": 32,
+  "trainable_parameters": 29535232,
+  "model_commit": null
+}

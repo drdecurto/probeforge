@@ -1,0 +1,15 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined_s1.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_dpo_onp.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.0024038461538461453,
+      "paired_ci95": [
+        -0.004807692307692328,
+        0.010416666666666666
+      ],
+      "groups": 12
+    }
+  ]
+}

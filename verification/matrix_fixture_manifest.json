@@ -1,0 +1,78 @@
+{
+  "runs": [
+    {
+      "index": 0,
+      "arm": "translated",
+      "seed": 42,
+      "sequence_tokens": 63915
+    },
+    {
+      "index": 1,
+      "arm": "translated",
+      "seed": 43,
+      "sequence_tokens": 63915
+    },
+    {
+      "index": 2,
+      "arm": "translated",
+      "seed": 44,
+      "sequence_tokens": 63915
+    },
+    {
+      "index": 3,
+      "arm": "random",
+      "seed": 42,
+      "sequence_tokens": 60773
+    },
+    {
+      "index": 4,
+      "arm": "random",
+      "seed": 43,
+      "sequence_tokens": 60773
+    },
+    {
+      "index": 5,
+      "arm": "random",
+      "seed": 44,
+      "sequence_tokens": 60773
+    },
+    {
+      "index": 6,
+      "arm": "mined",
+      "seed": 42,
+      "sequence_tokens": 60255
+    },
+    {
+      "index": 7,
+      "arm": "mined",
+      "seed": 43,
+      "sequence_tokens": 60255
+    },
+    {
+      "index": 8,
+      "arm": "mined",
+      "seed": 44,
+      "sequence_tokens": 60255
+    },
+    {
+      "index": 9,
+      "arm": "no_counterfactual",
+      "seed": 42,
+      "sequence_tokens": 63189
+    },
+    {
+      "index": 10,
+      "arm": "no_counterfactual",
+      "seed": 43,
+      "sequence_tokens": 63189
+    },
+    {
+      "index": 11,
+      "arm": "no_counterfactual",
+      "seed": 44,
+      "sequence_tokens": 63189
+    }
+  ],
+  "token_spread_fraction": 0.05726355315653602,
+  "note": "Inspect token spread; grouping prevents exact equality. Keep one epoch and compare actual runtimes."
+}

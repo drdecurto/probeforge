@@ -1,0 +1,77 @@
+REVERSE_PERCENTAGE
+BASE (English)
+After a 11% discount on the original price, the sale price is 8. Find the original price.
+Prices must be nonnegative. The data must admit a finite original price; there are no taxes or rounding.
+Archive reference (does not affect the calculation): 95947.
+{"answer":{"original_price":"800/89"},"status":"solved"}
+PARAPHRASE (Spanish)
+El comprador paga 8 después de que el vendedor reduzca el precio inicial en un 11%. ¿Cuál era el precio antes de la rebaja?
+Los precios no pueden ser negativos. Los datos deben admitir un precio original finito; no hay impuestos ni redondeo.
+Referencia de archivo (no afecta al cálculo): 95947.
+
+CONDITIONAL_PROBABILITY
+BASE (English)
+An urn contains 10 small red balls, 16 small blue balls, 18 large red balls, and 8 large blue balls. Draw one ball uniformly at random. Given that it is small, find the probability it is red.
+Ball counts must be nonnegative integers.
+Archive reference (does not affect the calculation): 12032.
+{"answer":{"probability":"5/13"},"status":"solved"}
+PARAPHRASE (Spanish)
+Solo se consideran las bolas pequeñas: hay 10 rojas y 16 azules. Las grandes son 18 rojas y 8 azules. Si una bola elegida uniformemente resulta ser pequeña, ¿qué probabilidad tiene de ser roja?
+Las cantidades de bolas deben ser enteros no negativos.
+Referencia de archivo (no afecta al cálculo): 12032.
+
+MODULAR_SCHEDULE
+BASE (English)
+Signal A occurs at nonnegative integer minutes t satisfying t mod 6 = 3. Signal B occurs when t mod 34 = 29. Find their first simultaneous minute.
+Incompatible congruences mean there is no feasible simultaneous time.
+Archive reference (does not affect the calculation): 55052.
+{"answer":{"first_time":"63"},"status":"solved"}
+PARAPHRASE (Spanish)
+Busca el menor entero t ≥ 0 cuyo resto al dividir entre 6 sea 3 y cuyo resto al dividir entre 34 sea 29.
+Si las congruencias son incompatibles, no existe una coincidencia factible.
+Referencia de archivo (no afecta al cálculo): 55052.
+
+INVENTORY_BALANCE
+BASE (English)
+A warehouse starts with 17 units, receives 8, and must then ship 11. How many units remain after completing the entire shipment?
+Borrowing, backorders, and negative stock are not allowed.
+Archive reference (does not affect the calculation): 82547.
+{"answer":{"closing_stock":"14"},"status":"solved"}
+PARAPHRASE (Spanish)
+Primero hay 17 artículos. Antes de atender un pedido de 11, llegan 8 más. Calcula las existencias después de entregar el pedido completo.
+No se permite pedir prestado, dejar pedidos pendientes ni tener existencias negativas.
+Referencia de archivo (no afecta al cálculo): 82547.
+
+DEPENDENCY_SCHEDULE
+BASE (English)
+Tasks A, B, and C last 19, 5, and 20 minutes, respectively. A and B may start at minute 0; C starts only after both finish. Find the earliest finish time of C.
+Time starts at 0. There are enough workers for all ready tasks. Every task must finish and all durations are positive.
+Archive reference (does not affect the calculation): 17493.
+{"answer":{"finish_time":"39"},"status":"solved"}
+PARAPHRASE (Spanish)
+C necesita 20 minutos de trabajo, A necesita 19 y B necesita 5. A y B pueden comenzar en el minuto 0; C solo comienza cuando ambas terminan. ¿En qué minuto puede terminar C como muy pronto?
+El tiempo comienza en 0. Hay trabajadores suficientes para todas las tareas listas. Todas las tareas deben terminar y sus duraciones son positivas.
+Referencia de archivo (no afecta al cálculo): 17493.
+
+UNIT_CONVERSION
+BASE (English)
+A sample has mass 9 kg. Express its mass in mg.
+Mass must be nonnegative. Use exactly 1 kg = 1000 g and 1 g = 1000 mg, without rounding.
+Archive reference (does not affect the calculation): 76049.
+{"answer":{"converted_mass":"9000000"},"status":"solved"}
+PARAPHRASE (Spanish)
+Cambia la unidad de la medida 9 kg a mg, sin cambiar la masa.
+Una masa debe ser no negativa. Usa exactamente 1 kg = 1000 g y 1 g = 1000 mg, sin redondear.
+Referencia de archivo (no afecta al cálculo): 76049.
+
+LINEAR_OPTIMIZATION
+BASE (English)
+For real x satisfying 20 ≤ x ≤ 35, maximize 11*x. Return the maximum objective value.
+There are no other constraints. An empty feasible region is infeasible; an objective with no finite maximum is unbounded.
+Archive reference (does not affect the calculation): 14964.
+{"answer":{"maximum":"385"},"status":"solved"}
+PARAPHRASE (Spanish)
+El beneficio es 11 veces una cantidad real x. Sus límites son 20 ≤ x ≤ 35. ¿Qué beneficio máximo se puede alcanzar?
+No existen otras restricciones. Una región vacía es infeasible; un objetivo sin máximo finito es unbounded.
+Referencia de archivo (no afecta al cálculo): 14964.
+

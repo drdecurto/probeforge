@@ -1,0 +1,99 @@
+{
+  "inherited_v3_validation": {
+    "direct_report_numeric_checks_passed": 274,
+    "pasted_table_discrepancies": [
+      {
+        "table": "main",
+        "row": "Phi-4",
+        "field": "counterfactual",
+        "pasted": "0.030",
+        "verified": "0.0"
+      }
+    ],
+    "scope": "Main, per-language, per-view and additional-pack CSV values rechecked against JSON reports. Transfer and thinking series retain existing log-based provenance; no experiment rerun.",
+    "v3_preservation_checks": {
+      "tables": true,
+      "source_tables": true,
+      "figures": true,
+      "Definitions": true
+    },
+    "v3_bibliography_unchanged": false,
+    "v3_editorial_validation": {
+      "pages": 17,
+      "all_pages_visually_reviewed": true,
+      "unresolved_references": false,
+      "overfull_boxes": false,
+      "future_experiment_promises_removed": true,
+      "declarations": "Added from published source at user request"
+    },
+    "bibliography_update": {
+      "cited_entries": 20,
+      "new_entries": 8,
+      "source": "https://www.mdpi.com/2504-446X/10/5/361",
+      "metadata_checked_against_primary_sources": true,
+      "all_entries_cited": true
+    }
+  },
+  "v4_validation": {
+    "pages": 19,
+    "round13_audit": "ROUND13_VALIDATION.json",
+    "bibliography_unchanged": true,
+    "other_five_source_tables_unchanged": true,
+    "declarations_unchanged": true,
+    "all_pages_visually_reviewed": true,
+    "unresolved_references": false,
+    "overfull_boxes": false,
+    "cited_entries": 20,
+    "all_entries_cited": true,
+    "build": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex; successful",
+    "remaining_warnings": "Two inherited ORCID font-shape substitutions"
+  },
+  "coauthor_review_2026_10_21": {
+    "comments_addressed": [
+      "L8",
+      "L9",
+      "L43",
+      "Equation 2",
+      "Figure 2"
+    ],
+    "pages": 19,
+    "all_pages_visually_reviewed": true,
+    "unresolved_references": false,
+    "overfull_boxes": false,
+    "experimental_assets_and_declarations_unchanged": true
+  },
+  "v6_validation": {
+    "previous_6_source_csvs_unchanged": true,
+    "previous_figures_unchanged": true,
+    "declarations_unchanged": true,
+    "round14_numeric_checks": 378,
+    "mixed50_english_strict_only": 57,
+    "muse_think_correct": [
+      26,
+      50
+    ],
+    "muse_think_denominators": [
+      26,
+      52
+    ],
+    "previous_6_table_values_unchanged": true,
+    "pages": 27,
+    "all_pages_visually_reviewed": true,
+    "unresolved_references": false,
+    "overfull_boxes": false,
+    "references": 23,
+    "all_references_cited": true,
+    "build": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+    "remaining_warnings": "Two inherited ORCID font-shape substitutions",
+    "appendix_placement": "Appendix tables placed together before References"
+  },
+  "v7_validation": {
+    "pages": 27,
+    "all_pages_visually_reviewed": true,
+    "unresolved_references": false,
+    "overfull_boxes": false,
+    "tables_figures_source_csvs_references_declarations_unchanged": true,
+    "possessive_author_attribution_removed": true,
+    "benchmark_achievement_statements_added": true
+  }
+}

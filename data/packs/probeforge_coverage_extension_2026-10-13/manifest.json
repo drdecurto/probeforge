@@ -1,0 +1,86 @@
+{
+  "candidate": true,
+  "seed": 2026101319,
+  "roots": 168,
+  "rows": 2736,
+  "families": [
+    "reverse_percentage",
+    "conditional_probability",
+    "modular_schedule",
+    "inventory_balance",
+    "dependency_schedule",
+    "unit_conversion",
+    "linear_optimization"
+  ],
+  "languages": [
+    "en",
+    "es"
+  ],
+  "views": [
+    "base",
+    "paraphrase",
+    "fact_reorder",
+    "distractor",
+    "counterfactual",
+    "missing_required",
+    "missing_optional",
+    "infeasible"
+  ],
+  "extra_view": "unbounded for linear_optimization only",
+  "cohorts": {
+    "development": {
+      "roots": 112,
+      "rows": 1824
+    },
+    "confirmation": {
+      "roots": 56,
+      "rows": 912
+    },
+    "pilot": {
+      "roots": 14,
+      "rows": 228,
+      "subset_of": "development"
+    }
+  },
+  "status_counts": {
+    "solved": 2016,
+    "needs_clarification": 336,
+    "infeasible": 336,
+    "unbounded": 48
+  },
+  "family_counts": {
+    "retention_reverse_percentage": 384,
+    "retention_conditional_probability": 384,
+    "retention_modular_schedule": 384,
+    "retention_inventory_balance": 384,
+    "retention_dependency_schedule": 384,
+    "retention_unit_conversion": 384,
+    "retention_linear_optimization": 432
+  },
+  "validation": {
+    "oracle_and_mutation_checks": 2736
+  },
+  "split": "test",
+  "training_eligible": false,
+  "transport": "existing retention exact-JSON branch; synthetic transfer diagnostic, not external retention benchmark",
+  "format": "Only status and answer. Canonical reduced rational strings. Different from old four-key math contract; compare models within this suite.",
+  "limitations": [
+    "Only English/Spanish; authored translations need human bilingual review.",
+    "Two authored task formulations per language, plus facts-list rendering; not unconstrained linguistic diversity.",
+    "Shared generators/templates: unique roots are not independent draws from all real-world tasks.",
+    "Negative counts/masses are intentionally contradictory diagnostic inputs, not naturalistic task prevalence.",
+    "Counterfactual difficulty is not matched. Number magnitude is not a measured difficulty rating.",
+    "No unrelated open-ended retention, tool use, visual reasoning, adversarial safety, or pretraining-contamination claim.",
+    "No tokenizer/model/GPU execution performed."
+  ],
+  "sha256": {
+    "answer_key.jsonl": "169965a572af6bac4303100d7989b2dd9e9722456525031354e1f505c238680a",
+    "confirmation56.jsonl": "9fc57aa05b107dbc207741d1d49247e5d79159c14ac7fd96715277dfe14c22c1",
+    "confirmation56_prompts_only.jsonl": "bf51885a4cc8b6cfb1a5d8cc15069c92c9eb39c519b368e4cdb06c219ea9d097",
+    "development112.jsonl": "16c844e2a523c11911db43a80471a4061f379e06c54713c0c6452d839d0fdb46",
+    "development112_prompts_only.jsonl": "71e1bd44eb93a1668bfff048ef8dcb3384307ad6dea81164e307bd85f24a773d",
+    "pilot14.jsonl": "caa6dc3af7ff0650d70502f9dd0b0a54d1535da47ddef47bbcc7db7771762a34",
+    "pilot14_prompts_only.jsonl": "6c505cb94087b036e4f4422bc229d0314856a9cb16451cafe1b55a2371f0c272",
+    "root_catalog.jsonl": "893a222313d9a11f99d7709837a5d07c4bf84d899634a6e4ed7d56ab0abf5da1"
+  }
+}

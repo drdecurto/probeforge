@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+.DS_Store
+.pytest_cache/
+/models/
+/runs/
+/logs/
+*.safetensors
+*.pt
+*.bin
+/sources/
+/demo_run/
+/checks/

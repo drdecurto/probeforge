@@ -1,0 +1,16 @@
+{
+  "pages": 21,
+  "references": 40,
+  "checks": [
+    "analyze_round20.py passed",
+    "analyze_paired.py passed",
+    "analyze_transfer_intervals.py passed",
+    "latexmk successful; no undefined references; only pre-existing title-block overfull hboxes",
+    "Review follow-up: extended analyze_paired.py passed for six additional main-test sets",
+    "analyze_glm53_diagnostics.py passed (main hashes, thinking counts, failure classification)",
+    "Rebuilt and visually checked 21 pages after follow-up",
+    "Final wording clarification: percentages and root-language denominator; 21 pages and no new build warnings"
+  ],
+  "new_main_prompts_checked": 7488,
+  "pdf_sha256": "310ddd71c8892257da72c0ee49b9ab3aa791904adb4b2b8136121c87814c4141"
+}

@@ -1,0 +1,8 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "rows": 155,
+  "maximum_tokens": 560,
+  "mean_tokens": 498.81290322580645,
+  "eos_token": "<|im_end|>",
+  "passed": true
+}

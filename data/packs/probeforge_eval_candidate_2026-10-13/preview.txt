@@ -1,0 +1,113 @@
+PROBEFORGE CANDIDATE — DIAGNOSTIC PREVIEW
+12 underlying problems, one per diagnostic stratum.
+These are part of diagnostic60, not additional independent problems.
+Exact answer keys must not be sent to the model.
+
+JOURNEY / equal_time_integer
+Group: ab0ea34e6d7045d7320a22f1
+BASE: A vehicle travels 240 km at 20 km/h, then 1080 km at 90 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "55"}
+COUNTERFACTUAL: A vehicle travels 285 km at 20 km/h, then 1080 km at 90 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "52"}
+BOUNDARY: A vehicle travels 240 km at 0 km/h, then 1080 km at 90 km/h. Find its overall average speed in km/h.
+Status: infeasible; answer: {}
+
+JOURNEY / unequal_time
+Group: e4bba0f068d8da1f1ba8db59
+BASE: A vehicle travels 490 km at 70 km/h, then 100 km at 100 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "295/4"}
+COUNTERFACTUAL: A vehicle travels 530 km at 70 km/h, then 100 km at 100 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "147/2"}
+BOUNDARY: A vehicle travels 490 km at ? km/h, then 100 km at 100 km/h. Find its overall average speed in km/h.
+Status: needs_clarification; answer: {}
+
+JOURNEY / unequal_distance_repeating
+Group: 614ee491e5372cc84da19bf5
+BASE: A vehicle travels 1005 km at 100 km/h, then 722 km at 90 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "310860/3253"}
+COUNTERFACTUAL: A vehicle travels 1006 km at 100 km/h, then 722 km at 90 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "777600/8137"}
+BOUNDARY: A vehicle travels 1005 km at 0 km/h, then 722 km at 90 km/h. Find its overall average speed in km/h.
+Status: infeasible; answer: {}
+
+JOURNEY / equal_distance_harmonic
+Group: f7936e62924b341d2cb3da0a
+BASE: A vehicle travels 589 km at 70 km/h, then 589 km at 40 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "560/11"}
+COUNTERFACTUAL: A vehicle travels 590 km at 70 km/h, then 589 km at 40 km/h. Find its overall average speed in km/h.
+Status: solved; answer: {"speed": "110040/2161"}
+BOUNDARY: A vehicle travels 589 km at ? km/h, then 589 km at 40 km/h. Find its overall average speed in km/h.
+Status: needs_clarification; answer: {}
+
+PRODUCTION / unique_optimum
+Group: 27e6d29b6afd9471d9661e2a
+BASE: Choose nonnegative integers x,y with 2*x+3*y<=68 and x+y>=0. Maximize 23*x+24*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "782", "x": "34", "y": "0"}
+COUNTERFACTUAL: Choose nonnegative integers x,y with 2*x+3*y<=69 and x+y>=0. Maximize 23*x+24*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "783", "x": "33", "y": "1"}
+BOUNDARY: Choose nonnegative integers x,y with 2*x+3*y<=68 and x+y>=35. Maximize 23*x+24*y. Break profit ties by smallest x, then smallest y.
+Status: infeasible; answer: {}
+
+PRODUCTION / profit_ties
+Group: 9bcb65f668892d88b9d7f175
+BASE: Choose nonnegative integers x,y with 2*x+3*y<=65 and x+y>=0. Maximize 22*x+33*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "715", "x": "1", "y": "21"}
+COUNTERFACTUAL: Choose nonnegative integers x,y with 2*x+3*y<=66 and x+y>=0. Maximize 22*x+33*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "726", "x": "0", "y": "22"}
+BOUNDARY: Choose nonnegative integers x,y with 2*x+3*y<=65 and x+y>=33. Maximize 22*x+33*y. Break profit ties by smallest x, then smallest y.
+Status: infeasible; answer: {}
+
+PRODUCTION / binding_minimum
+Group: e64b44e8021c76d47c43230c
+BASE: Choose nonnegative integers x,y with 2*x+3*y<=87 and x+y>=43. Maximize 6*x+25*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "277", "x": "42", "y": "1"}
+COUNTERFACTUAL: Choose nonnegative integers x,y with 2*x+3*y<=88 and x+y>=43. Maximize 6*x+25*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "296", "x": "41", "y": "2"}
+BOUNDARY: Choose nonnegative integers x,y with 2*x+3*y<=87 and x+y>=44. Maximize 6*x+25*y. Break profit ties by smallest x, then smallest y.
+Status: infeasible; answer: {}
+
+PRODUCTION / unused_capacity
+Group: 6f952694c4febe1359b18c4f
+BASE: Choose nonnegative integers x,y with 2*x+3*y<=61 and x+y>=0. Maximize 12*x+4*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "360", "x": "30", "y": "0"}
+COUNTERFACTUAL: Choose nonnegative integers x,y with 2*x+3*y<=62 and x+y>=0. Maximize 12*x+4*y. Break profit ties by smallest x, then smallest y.
+Status: solved; answer: {"profit": "372", "x": "31", "y": "0"}
+BOUNDARY: Choose nonnegative integers x,y with 2*x+3*y<=61 and x+y>=31. Maximize 12*x+4*y. Break profit ties by smallest x, then smallest y.
+Status: infeasible; answer: {}
+
+INTEREST / integer_result
+Group: 8a5d89bd9425f6a2ddab9ca1
+BASE: Principal 1875 earns annual compound interest at rate 1/5 for 3 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "3240"}
+COUNTERFACTUAL: Principal 2000 earns annual compound interest at rate 1/5 for 3 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "3456"}
+BOUNDARY: Principal 1875 earns annual compound interest at rate ? for 3 years. No fees or rounding. Find the final balance.
+Status: needs_clarification; answer: {}
+
+INTEREST / terminating_fraction
+Group: f6bef6b848442a087b3c8fa6
+BASE: Principal 999 earns annual compound interest at rate 1/20 for 4 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "194286519/160000"}
+COUNTERFACTUAL: Principal 160999 earns annual compound interest at rate 1/20 for 4 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "31311246519/160000"}
+BOUNDARY: Principal 999 earns annual compound interest at rate 1/20 for ? years. No fees or rounding. Find the final balance.
+Status: needs_clarification; answer: {}
+
+INTEREST / repeating_fraction
+Group: 17d41e23a2a9b761f65aea44
+BASE: Principal 822 earns annual compound interest at rate 1/9 for 4 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "2740000/2187"}
+COUNTERFACTUAL: Principal 7383 earns annual compound interest at rate 1/9 for 4 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "24610000/2187"}
+BOUNDARY: Principal 822 earns annual compound interest at rate ? for 4 years. No fees or rounding. Find the final balance.
+Status: needs_clarification; answer: {}
+
+INTEREST / long_horizon
+Group: 1ff1df39422abd574f70fb1d
+BASE: Principal 1087 earns annual compound interest at rate 1/10 for 5 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "175062437/100000"}
+COUNTERFACTUAL: Principal 101087 earns annual compound interest at rate 1/10 for 5 years. No fees or rounding. Find the final balance.
+Status: solved; answer: {"balance": "16280162437/100000"}
+BOUNDARY: Principal 1087 earns annual compound interest at rate 1/10 for ? years. No fees or rounding. Find the final balance.
+Status: needs_clarification; answer: {}
+

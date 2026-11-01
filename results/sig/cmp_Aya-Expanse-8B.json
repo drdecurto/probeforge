@@ -1,0 +1,55 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_aya_base.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_aya_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.07692307692307693,
+      "paired_ci95": [
+        0.04006410256410257,
+        0.10657051282051282
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalaya/report12_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.08012820512820513,
+      "paired_ci95": [
+        0.040865384615384616,
+        0.11057692307692307
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalaya/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.07772435897435898,
+      "paired_ci95": [
+        0.040865384615384616,
+        0.10737179487179488
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalaya/report12_translated.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.0,
+      "paired_ci95": [
+        0.0,
+        0.0
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_aya_own_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.07852564102564102,
+      "paired_ci95": [
+        0.040865384615384616,
+        0.10817307692307693
+      ],
+      "groups": 12
+    }
+  ]
+}

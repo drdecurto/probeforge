@@ -1,0 +1,21 @@
+{
+  "model": "models/Qwen3-8B",
+  "train_data": "data/reference_train.jsonl",
+  "validation_data": "data/reference_validation.jsonl",
+  "output_dir": "runs/contrast8b_mn5_dpo",
+  "seed": 42,
+  "max_length": 2048,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "batch_size": 1,
+  "gradient_accumulation": 32,
+  "learning_rate": 5e-06,
+  "epochs": 1,
+  "quantize": false,
+  "gradient_checkpointing": true,
+  "logging_steps": 5,
+  "eval_steps": 50,
+  "save_steps": 50,
+  "init_adapter": "runs/contrast8b_mn5_sft",
+  "beta": 0.1
+}

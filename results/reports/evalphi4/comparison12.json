@@ -1,0 +1,35 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4/report12_base.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4/report12_translated.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.10737179487179488,
+      "paired_ci95": [
+        -0.028846153846153844,
+        0.30448717948717946
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.28365384615384615,
+      "paired_ci95": [
+        0.13221153846153846,
+        0.4679487179487179
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4/report12_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3541666666666667,
+      "paired_ci95": [
+        0.15865384615384615,
+        0.5649038461538461
+      ],
+      "groups": 12
+    }
+  ]
+}

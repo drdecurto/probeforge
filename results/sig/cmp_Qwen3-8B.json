@@ -1,0 +1,195 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_base.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_translated.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.17147435897435895,
+      "paired_ci95": [
+        0.026442307692307685,
+        0.3405448717948718
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3197115384615385,
+      "paired_ci95": [
+        0.15224358974358973,
+        0.500801282051282
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_random_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.27884615384615385,
+      "paired_ci95": [
+        0.14983974358974358,
+        0.4166666666666667
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_random_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.21153846153846154,
+      "paired_ci95": [
+        0.10897435897435898,
+        0.3501602564102564
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2532051282051282,
+      "paired_ci95": [
+        0.1362179487179487,
+        0.3918269230769231
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31730769230769235,
+      "paired_ci95": [
+        0.1730769230769231,
+        0.47355769230769235
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_mined_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.27483974358974356,
+      "paired_ci95": [
+        0.1362179487179487,
+        0.4350961538461538
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_no_counterfactual.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.13701923076923075,
+      "paired_ci95": [
+        0.032852564102564104,
+        0.2588141025641026
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_dpo_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2556089743589744,
+      "paired_ci95": [
+        0.13381410256410256,
+        0.3886217948717949
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_dpo_onp.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3197115384615385,
+      "paired_ci95": [
+        0.17548076923076925,
+        0.4751602564102564
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_v3_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.28926282051282054,
+      "paired_ci95": [
+        0.15625,
+        0.4551282051282051
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_v3_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.24278846153846154,
+      "paired_ci95": [
+        0.11458333333333333,
+        0.3998397435897436
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_xfer5_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.1971153846153846,
+      "paired_ci95": [
+        0.09455128205128205,
+        0.3261217948717949
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv2/report12_xfer5_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.28044871794871795,
+      "paired_ci95": [
+        0.13862179487179485,
+        0.4423076923076923
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4/report12_v4_8b.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.25801282051282054,
+      "paired_ci95": [
+        0.12660256410256412,
+        0.3974358974358974
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4b/report12_v4b_8b.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.21634615384615385,
+      "paired_ci95": [
+        0.10336538461538462,
+        0.358974358974359
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_8b_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.25080128205128205,
+      "paired_ci95": [
+        0.11057692307692307,
+        0.4182692307692308
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_8b_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2299679487179487,
+      "paired_ci95": [
+        0.09935897435897435,
+        0.38141025641025644
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_8b_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31169871794871795,
+      "paired_ci95": [
+        0.16666666666666666,
+        0.4647435897435897
+      ],
+      "groups": 12
+    }
+  ]
+}

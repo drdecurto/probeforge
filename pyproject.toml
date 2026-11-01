@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probeforge"
+version = "0.3.0"
+description = "Verified multilingual contrast curricula and experimental reasoning training"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+train = ["torch==2.6.0", "transformers==4.51.3", "peft==0.15.2", "accelerate==1.6.0", "safetensors>=0.4.3", "numpy<3"]
+quant = ["bitsandbytes==0.45.5; platform_system == 'Linux'"]
+vision = ["Pillow>=10,<13"]
+# Environment used for the transformers-5 extensions (Qwen3-32B serving, GLM-4.7-Flash training/serving, GLM-5.3):
+# vllm==0.32.0 (torch 2.13 / cu130, transformers 5.19) + peft==0.18.1; see docs/ENVIRONMENTS.md.
+train5 = ["transformers>=5.19", "peft==0.18.1", "accelerate>=1.15", "safetensors>=0.4.3"]
+analysis = ["numpy", "matplotlib", "reportlab"]
+energy = ["nvidia-ml-py>=12,<14"]
+
+[project.scripts]
+probeforge = "probeforge.cli:main"
+contrastforge = "contrastforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

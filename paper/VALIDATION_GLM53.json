@@ -1,0 +1,19 @@
+{
+  "main4k": {
+    "n": 1248,
+    "correct": 521,
+    "length_stops": 73,
+    "failures": 727,
+    "incorrect_answer_with_correct_status_and_facts": 424
+  },
+  "think26": {
+    "n": 26,
+    "correct": 12,
+    "length_stops": 13
+  },
+  "think60": {
+    "n": 52,
+    "correct": 34,
+    "length_stops": 4
+  }
+}

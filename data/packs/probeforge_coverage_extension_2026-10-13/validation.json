@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "native_schema_audit": {
+    "rows": 2736,
+    "groups": 168,
+    "families": 7,
+    "passed": true
+  },
+  "native_verifier_gold_passes": 2736,
+  "native_verifier_wrong_status_rejections": 2736,
+  "two_oracle_checks": 2736,
+  "missing_required_multiple_valid_completions": 336,
+  "prompt_only_exports_match": true,
+  "manifest_hashes_match": true,
+  "limitations": "No tokenizer/model execution or independent bilingual review."
+}

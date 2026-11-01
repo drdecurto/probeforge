@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "You investigate a deterministic hidden system. Exactly one listed candidate rule is true.\nAll candidates have equal prior probability. Use actual observations to predict the three target outputs.\nThe formula uses integer arithmetic: // is floor division; % is Python nonnegative modulo;\nint(condition) is 1 if true and 0 otherwise; sequence indices start at zero.\nBattery input is [s, charge, demand] in normalized integer units, not physical units.\nYou may query only listed probes, paying their costs. Select useful experiments within the remaining budget.\nStop when sufficient evidence is available. If ambiguous, make your best prediction.\nReply with exactly one JSON object and no other text:\n{\"action\":\"probe\",\"probe_id\":\"p0\"} OR {\"action\":\"answer\",\"predictions\":[integer,integer,integer]}.\nDo not invent tool observations. The runtime will execute probes and return their results."
+  },
+  {
+    "role": "user",
+    "content": "{\"candidate_parameters\":[[1,2,7],[6,2,7],[1,2,2],[1,3,2],[6,3,2],[6,2,2],[6,3,7],[1,3,7]],\"family\":\"affine\",\"formula\":\"a*x + b*max(0,x) + c*min(0,x)\",\"observations\":[{\"input\":0,\"output\":0}],\"parameter_order\":[\"a\",\"b\",\"c\"],\"probes\":[{\"cost\":1,\"id\":\"p0\",\"input\":1},{\"cost\":2,\"id\":\"p1\",\"input\":3},{\"cost\":1,\"id\":\"p2\",\"input\":-2},{\"cost\":1,\"id\":\"p3\",\"input\":-3},{\"cost\":1,\"id\":\"p4\",\"input\":-4},{\"cost\":2,\"id\":\"p5\",\"input\":2},{\"cost\":1,\"id\":\"p6\",\"input\":0},{\"cost\":1,\"id\":\"p7\",\"input\":4},{\"cost\":1,\"id\":\"p8\",\"input\":-1}],\"remaining_budget\":1,\"targets\":[-7,7,6]}"
+  }
+]

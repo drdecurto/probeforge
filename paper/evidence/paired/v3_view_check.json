@@ -1,0 +1,18 @@
+{
+  "archive": "back/round9/round9_v3_14b.tgz",
+  "member": "data/curriculav3_14b/mined/sft_train.jsonl",
+  "view_counts": {
+    "context_business": 884,
+    "distractor": 884,
+    "boundary": 884,
+    "counterfactual": 884,
+    "expansion": 884,
+    "paraphrase": 884,
+    "base": 884,
+    "context_academic": 884,
+    "boundary_alt": 884,
+    "infeasible": 468,
+    "units": 299
+  },
+  "conclusion": "Alternative missing-fact view is boundary_alt, not rewire. Mining implementation counts rewire if present; no rewire rows in this archive."
+}

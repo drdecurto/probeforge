@@ -1,0 +1,110 @@
+[
+  {
+    "file": "r19_test_mined_s1.jsonl",
+    "pass_at_1": 0.3157051282051282,
+    "all_six": 32,
+    "all_languages_base": 2
+  },
+  {
+    "file": "r19_test_mined_s2.jsonl",
+    "pass_at_1": 0.25961538461538464,
+    "all_six": 24,
+    "all_languages_base": 2
+  },
+  {
+    "file": "r4_test_base.jsonl",
+    "pass_at_1": 0.036057692307692304,
+    "all_six": 0,
+    "all_languages_base": 0
+  },
+  {
+    "file": "r4_test_mined.jsonl",
+    "pass_at_1": 0.28926282051282054,
+    "all_six": 25,
+    "all_languages_base": 1
+  },
+  {
+    "file": "r4_test_mined_s1.jsonl",
+    "pass_at_1": 0.35336538461538464,
+    "all_six": 34,
+    "all_languages_base": 1
+  },
+  {
+    "file": "r4_test_mined_s2.jsonl",
+    "pass_at_1": 0.3108974358974359,
+    "all_six": 33,
+    "all_languages_base": 2
+  },
+  {
+    "file": "r6_test_base.jsonl",
+    "pass_at_1": 0.08253205128205128,
+    "all_six": 5,
+    "all_languages_base": 0
+  },
+  {
+    "file": "r6_test_random.jsonl",
+    "pass_at_1": 0.40865384615384615,
+    "all_six": 58,
+    "all_languages_base": 4
+  },
+  {
+    "file": "r6_test_random_s1.jsonl",
+    "pass_at_1": 0.41907051282051283,
+    "all_six": 60,
+    "all_languages_base": 4
+  },
+  {
+    "file": "r6_test_random_s2.jsonl",
+    "pass_at_1": 0.4110576923076923,
+    "all_six": 60,
+    "all_languages_base": 4
+  },
+  {
+    "file": "r8_test_base.jsonl",
+    "pass_at_1": 0.021634615384615384,
+    "all_six": 0,
+    "all_languages_base": 0
+  },
+  {
+    "file": "r8_test_mined.jsonl",
+    "pass_at_1": 0.37580128205128205,
+    "all_six": 47,
+    "all_languages_base": 2
+  },
+  {
+    "file": "evidence/round20/q32/eval/test_base32b.jsonl",
+    "pass_at_1": 0.14423076923076922,
+    "all_six": 4,
+    "all_languages_base": 0
+  },
+  {
+    "file": "evidence/round20/q32/eval/test_random32b.jsonl",
+    "pass_at_1": 0.28125,
+    "all_six": 23,
+    "all_languages_base": 1
+  },
+  {
+    "file": "evidence/round20/q32/eval/test_v4c32b.jsonl",
+    "pass_at_1": 0.45032051282051283,
+    "all_six": 64,
+    "all_languages_base": 5
+  },
+  {
+    "file": "evidence/round20/glm/eval/test_glmbase.jsonl",
+    "pass_at_1": 0.05608974358974359,
+    "all_six": 0,
+    "all_languages_base": 0
+  },
+  {
+    "file": "evidence/round20/glm/eval/test_glmrandom.jsonl",
+    "pass_at_1": 0.22115384615384615,
+    "all_six": 11,
+    "all_languages_base": 0
+  },
+  {
+    "file": "evidence/round20/glm/eval/test_glmv4c.jsonl",
+    "pass_at_1": 0.29967948717948717,
+    "all_six": 25,
+    "all_languages_base": 1
+  }
+]

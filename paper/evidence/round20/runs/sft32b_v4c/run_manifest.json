@@ -1,0 +1,35 @@
+{
+  "config": {
+    "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/Qwen3-32B",
+    "train_data": "/gpfs/scratch/bsc21/bsc021885/cf/v4/mixc_32b_s1/sft_train.jsonl",
+    "validation_data": "/gpfs/scratch/bsc21/bsc021885/cf/v4/mixc_32b_s1/sft_validation.jsonl",
+    "output_dir": "/gpfs/scratch/bsc21/bsc021885/cf/runs/sft32b_v4c",
+    "seed": 1,
+    "max_length": 2048,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "batch_size": 1,
+    "gradient_accumulation": 32,
+    "learning_rate": 0.0001,
+    "epochs": 1,
+    "quantize": true,
+    "gradient_checkpointing": true,
+    "logging_steps": 5,
+    "eval_steps": 100000,
+    "save_steps": 25,
+    "final_eval": false
+  },
+  "stage": "sft",
+  "versions": {
+    "torch": "2.6.0",
+    "transformers": "4.51.3",
+    "peft": "0.15.2",
+    "accelerate": "1.6.0"
+  },
+  "train_sha256": "9b01bbb76a5b23ebe4a9702a4454f5c7a73717ed2f800840e255c9d173c80067",
+  "validation_sha256": "a721fca8e27aef112d542fc6e07d6b57a1b2c6070356d7bcea50ef9cb810e1d3",
+  "world_size": 1,
+  "effective_batch": 32,
+  "trainable_parameters": 134217728,
+  "model_commit": null
+}

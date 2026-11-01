@@ -1,0 +1,13 @@
+\begin{table*}[t]
+\caption{Single-seed scale and architecture extensions (seed 1). Main is exact accuracy on the same 1248-prompt test; raw/chat S and chat K follow Table~\ref{tab:replicated}. MGSM uses strict extraction. Bold values exceed the matched base after rounding, not a significance threshold. Quantization and adapter targets differ across families.}\label{tab:scale}
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrrrr}\toprule
+Model & Curriculum & Main & Raw S & Chat S & Chat K & Belebele & GMMLU & MGSM\\\midrule
+Qwen3-32B & Base & 0.144 & 0.444 & 0.449 & 0.468 & 0.897 & 0.788 & 0.672\\
+Qwen3-32B & Random & \textbf{0.281} & \textbf{0.462} & \textbf{0.488} & \textbf{0.595} & 0.891 & \textbf{0.791} & \textbf{0.799}\\
+Qwen3-32B & Mixed-format & \textbf{0.450} & \textbf{0.527} & \textbf{0.585} & \textbf{0.873} & \textbf{0.904} & \textbf{0.789} & \textbf{0.886}\\
+GLM-4.7-Flash & Base & 0.056 & 0.428 & 0.456 & 0.428 & 0.805 & 0.669 & 0.730\\
+GLM-4.7-Flash & Random & \textbf{0.221} & \textbf{0.476} & \textbf{0.519} & \textbf{0.640} & \textbf{0.821} & \textbf{0.682} & \textbf{0.755}\\
+GLM-4.7-Flash & Mixed-format & \textbf{0.300} & \textbf{0.508} & \textbf{0.590} & \textbf{0.756} & \textbf{0.821} & \textbf{0.683} & \textbf{0.781}\\
+\bottomrule\end{tabular}
+\end{table*}

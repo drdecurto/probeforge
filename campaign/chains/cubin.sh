@@ -1,0 +1,2 @@
+S=/gpfs/scratch/bsc21/bsc021885/cf; unset PYTHONPATH PYTHONUSERBASE TRANSFORMERS_CACHE; export FLASHINFER_CUBIN_DIR=$S/flashinfer_cubins HF_HOME=$S/hf_home; mkdir -p $FLASHINFER_CUBIN_DIR; cd /tmp
+for i in $(seq 1 30); do timeout 280 $S/envs/vllm32/bin/flashinfer download-cubin > $S/logs/cubin_try.log 2>&1 && { echo "cubin done $(date) $(du -sh $FLASHINFER_CUBIN_DIR | cut -f1)"; break; }; echo "try $i $(du -sh $FLASHINFER_CUBIN_DIR | cut -f1) $(tail -1 $S/logs/cubin_try.log | cut -c1-150)"; sleep 5; done

@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "seed": 42,
+  "languages": [
+    "en",
+    "es",
+    "ca",
+    "ar",
+    "lb"
+  ],
+  "split_policy": "disjoint problem families; all views remain with their root",
+  "translation_review": "authored templates; bilingual review required",
+  "splits": {
+    "train": {
+      "rows": 26665,
+      "groups": 1000,
+      "families": [
+        "rate",
+        "affine",
+        "mean",
+        "variance",
+        "product",
+        "energy"
+      ]
+    },
+    "validation": {
+      "rows": 5000,
+      "groups": 200,
+      "families": [
+        "workrate",
+        "rectangle",
+        "system"
+      ]
+    },
+    "test": {
+      "rows": 5000,
+      "groups": 200,
+      "families": [
+        "journey",
+        "production",
+        "interest"
+      ]
+    }
+  },
+  "dataset_hash": "c0b1b8c92d2cac5427e89807f03a9ae39c9dfaf1c500de3fd9bd06bd7f5c9e27"
+}

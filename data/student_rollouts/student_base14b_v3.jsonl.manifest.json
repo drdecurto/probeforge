@@ -1,0 +1,25 @@
+{
+ "fingerprint": "9bde777e74ca5182056a08357bf5fb6b6dc2b25eaac945c108be2486ef97ff44",
+ "config": {
+  "backend": "local",
+  "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/Qwen3-14B",
+  "revision": "main",
+  "adapter": null,
+  "base_url": null,
+  "quantize": false,
+  "vision": false,
+  "seed": 42,
+  "temperature": 0,
+  "budgets": [
+   512
+  ],
+  "samples": 1,
+  "input_hash": "6cd1bb28b6c98e475ab736ddf88f22d7b5d7af4003cc7830d7db03120e48e6be",
+  "synthetic": false,
+  "nvml_indices": null,
+  "api_extra": null,
+  "thinking": false,
+  "model_fingerprint": "6d19100a68dc9b8262e9730a3e6b99d870ee08efa8ca885e1dbe00cdd2face20"
+ },
+ "note": "14B v2 rollouts (identical rows) + new boundary_alt/infeasible views"
+}

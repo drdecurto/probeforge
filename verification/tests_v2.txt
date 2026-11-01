@@ -1,0 +1,47 @@
+test_api_retry_usage_and_remote_energy (test_contrast.ContrastTests.test_api_retry_usage_and_remote_energy) ... ok
+test_collection_resume_mining_and_evaluation (test_contrast.ContrastTests.test_collection_resume_mining_and_evaluation) ... Collected 25 new requests
+Collected 50 new requests
+Collected 75 new requests
+Collected 100 new requests
+Collected 125 new requests
+Collected 150 new requests
+Collected 175 new requests
+Collected 200 new requests
+Collected 225 new requests
+Collected 250 new requests
+Collected 275 new requests
+Collected 300 new requests
+ok
+test_energy_integrates_time_not_problem_count (test_contrast.ContrastTests.test_energy_integrates_time_not_problem_count) ... ok
+test_exact_answers_and_boundary_assumptions (test_contrast.ContrastTests.test_exact_answers_and_boundary_assumptions) ... ok
+test_family_splits_and_all_gold_responses (test_contrast.ContrastTests.test_family_splits_and_all_gold_responses) ... ok
+test_legacy_dedup_never_promotes_scores (test_contrast.ContrastTests.test_legacy_dedup_never_promotes_scores) ... ok
+test_lic_oracle_baselines_and_counterfactual (test_contrast.ContrastTests.test_lic_oracle_baselines_and_counterfactual) ... ok
+test_missing_and_truncated_count_as_failures (test_contrast.ContrastTests.test_missing_and_truncated_count_as_failures) ... ok
+test_no_test_data_in_training (test_contrast.ContrastTests.test_no_test_data_in_training) ... ok
+test_product_maximum_against_dense_rational_grid (test_contrast.ContrastTests.test_product_maximum_against_dense_rational_grid) ... ok
+test_retention_import_is_exact_and_evaluation_only (test_contrast.ContrastTests.test_retention_import_is_exact_and_evaluation_only) ... ok
+test_strict_numeric_and_schema_verifier (test_contrast.ContrastTests.test_strict_numeric_and_schema_verifier) ... ok
+test_variants_change_semantics_and_unit_surface (test_contrast.ContrastTests.test_variants_change_semantics_and_unit_surface) ... ok
+test_vision_grounding_reflection_and_scene_split (test_contrast.ContrastTests.test_vision_grounding_reflection_and_scene_split) ... ok
+test_api_contract_cache_and_budget (test_core.CoreTests.test_api_contract_cache_and_budget) ... ok
+test_budget_zero_stops (test_core.CoreTests.test_budget_zero_stops) ... ok
+test_build_collection_branch_and_evaluation (test_core.CoreTests.test_build_collection_branch_and_evaluation) ... ok
+test_counterfactual_worlds_have_identical_prompts (test_core.CoreTests.test_counterfactual_worlds_have_identical_prompts) ... ok
+test_invalid_probe_is_failure (test_core.CoreTests.test_invalid_probe_is_failure) ... ok
+test_oracle_dominates_no_information_on_complete_groups (test_core.CoreTests.test_oracle_dominates_no_information_on_complete_groups) ... ok
+test_parser_rejects_extra_prose_and_bool (test_core.CoreTests.test_parser_rejects_extra_prose_and_bool) ... ok
+test_random_probe_intervention_preserves_cost (test_core.CoreTests.test_random_probe_intervention_preserves_cost) ... ok
+test_rule_arithmetic (test_core.CoreTests.test_rule_arithmetic) ... ok
+test_split_audit_and_reproducibility (test_core.CoreTests.test_split_audit_and_reproducibility) ... ok
+test_training_split_validation_rejects_overlap (test_core.CoreTests.test_training_split_validation_rejects_overlap) ... ok
+test_truth_does_not_change_expert_initial_action (test_core.CoreTests.test_truth_does_not_change_expert_initial_action) ... ok
+test_contrast_single_process_and_matrix_arguments (test_slurm.SlurmTests.test_contrast_single_process_and_matrix_arguments) ... ok
+test_submission_arguments_without_scheduler (test_slurm.SlurmTests.test_submission_arguments_without_scheduler) ... ok
+test_logps_padding_invariance_and_gradient (test_training_data.EncodingTests.test_logps_padding_invariance_and_gradient) ... ok
+test_prompt_mask_and_eos (test_training_data.EncodingTests.test_prompt_mask_and_eos) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 4.137s
+
+OK

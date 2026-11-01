@@ -1,0 +1,265 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_base14b.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_distill.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2796474358974359,
+      "paired_ci95": [
+        0.11057692307692309,
+        0.4671474358974359
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_distill_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31009615384615385,
+      "paired_ci95": [
+        0.12099358974358974,
+        0.5136217948717948
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_distill_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.32371794871794873,
+      "paired_ci95": [
+        0.13701923076923075,
+        0.5200320512820513
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_distillsyn.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2956730769230769,
+      "paired_ci95": [
+        0.1217948717948718,
+        0.4855769230769231
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_distillsyn_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2676282051282051,
+      "paired_ci95": [
+        0.0969551282051282,
+        0.452724358974359
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_distillsyn_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2852564102564103,
+      "paired_ci95": [
+        0.10737179487179488,
+        0.4775641025641026
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2724358974358974,
+      "paired_ci95": [
+        0.11458333333333333,
+        0.452724358974359
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mined_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3052884615384615,
+      "paired_ci95": [
+        0.1546474358974359,
+        0.4751602564102564
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mined_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.27003205128205127,
+      "paired_ci95": [
+        0.1201923076923077,
+        0.4567307692307692
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mixed50.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31891025641025644,
+      "paired_ci95": [
+        0.1434294871794872,
+        0.5048076923076923
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mixed50_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31891025641025644,
+      "paired_ci95": [
+        0.14583333333333334,
+        0.5048076923076923
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_mixed50_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3141025641025641,
+      "paired_ci95": [
+        0.1466346153846154,
+        0.4895833333333333
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3261217948717949,
+      "paired_ci95": [
+        0.12980769230769232,
+        0.5344551282051282
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_random_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3365384615384615,
+      "paired_ci95": [
+        0.1546474358974359,
+        0.5280448717948718
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_random_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.328525641025641,
+      "paired_ci95": [
+        0.15064102564102563,
+        0.5112179487179487
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_think100.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.16987179487179485,
+      "paired_ci95": [
+        0.05689102564102564,
+        0.28205128205128205
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_translated.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.10576923076923077,
+      "paired_ci95": [
+        -0.04006410256410257,
+        0.2884615384615385
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3477564102564103,
+      "paired_ci95": [
+        0.1746794871794872,
+        0.5360576923076923
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_mined_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2916666666666667,
+      "paired_ci95": [
+        0.1482371794871795,
+        0.4439102564102564
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_mined_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.28044871794871795,
+      "paired_ci95": [
+        0.1434294871794872,
+        0.422275641025641
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3301282051282051,
+      "paired_ci95": [
+        0.16185897435897437,
+        0.5112179487179488
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_random_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.23397435897435895,
+      "paired_ci95": [
+        0.11057692307692307,
+        0.3838141025641026
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_random_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3477564102564103,
+      "paired_ci95": [
+        0.16666666666666666,
+        0.5400641025641025
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_14b_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3092948717948718,
+      "paired_ci95": [
+        0.1450320512820513,
+        0.4967948717948718
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_14b_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.27403846153846156,
+      "paired_ci95": [
+        0.1201923076923077,
+        0.452724358974359
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_14b_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.32211538461538464,
+      "paired_ci95": [
+        0.15544871794871795,
+        0.5024038461538461
+      ],
+      "groups": 12
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\caption{Unadapted references on ProbeForge. Primary runs use 4096 tokens and low reasoning effort; the 512-token run is a separate protocol diagnostic. CIs bootstrap roots. Tokens include generated reasoning and answer content. These runs use 16 GPUs and are not compute-matched to the adapted models.}\label{tab:frontier}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrlrr}
+\toprule
+Model & Set & Prompts & Accuracy & 95\% CI & Worst & Tokens\\\midrule
+Muse-Spark-Open & Main & 1248 & 0.974 & [0.962, 0.986] & 0.854 & 697\\
+Muse-Spark-Open & Core60 & 6240 & 0.972 & [0.966, 0.978] & 0.871 & 703\\
+Muse-Spark-Open & Diag60 & 6240 & 0.958 & [0.948, 0.968] & 0.817 & 677\\
+Muse-Spark-Open & Main (512-token diagnostic) & 1248 & 0.149 & [0.111, 0.192] & 0.031 & 500\\
+GLM-5.3 & Main & 1248 & 0.417 & [0.345, 0.495] & 0.240 & 532\\
+GLM-5.3 & Core60 & 6240 & 0.420 & [0.379, 0.464] & 0.235 & 499\\
+GLM-5.3 & Diag60 & 6240 & 0.549 & [0.504, 0.591] & 0.383 & 442\\
+\bottomrule
+\end{tabular}
+\end{table*}

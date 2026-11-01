@@ -1,0 +1,19 @@
+\begin{table}[tbp]
+\caption{Paired correctness on the main test. Six-view correctness requires the base and five answer-preserving transformations to pass jointly (156 root--language cells). Cross-language correctness requires the base view to pass in all 13 language configurations (12 roots). The 8B, 14B and Phi-4 adapters report three-seed means $\pm$ sample SD; the 32B and GLM extensions use one seed. Base rows are single evaluations.}\label{tab:paired}
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcc}\toprule
+Checkpoint & Six views & All languages\\\midrule
+Qwen3-8B base & 0.000 & 0.000\\
+Qwen3-8B mined & $0.197\pm0.032$ & $0.111\pm0.048$\\
+Qwen3-14B base & 0.032 & 0.000\\
+Qwen3-14B random & $0.380\pm0.007$ & $0.333\pm0.000$\\
+Phi-4 base & 0.000 & 0.000\\
+Phi-4 mined & $0.220\pm0.075$ & $0.167\pm0.000$\\
+Qwen3-32B base & 0.026 & 0.000\\
+Qwen3-32B random & 0.147 & 0.083\\
+Qwen3-32B mixed-format & 0.410 & 0.417\\
+GLM-4.7-Flash base & 0.000 & 0.000\\
+GLM-4.7-Flash random & 0.071 & 0.000\\
+GLM-4.7-Flash mixed-format & 0.160 & 0.083\\
+\bottomrule\end{tabular}
+\end{table}

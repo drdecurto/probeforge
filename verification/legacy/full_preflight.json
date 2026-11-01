@@ -1,0 +1,6 @@
+{
+  "train_rows": 1840,
+  "validation_rows": 298,
+  "max_tokens": 560,
+  "mean_tokens": 499.31945743685685
+}

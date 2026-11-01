@@ -1,0 +1,19 @@
+{
+  "model": "models/Qwen3-8B",
+  "train_data": "data/expert_train/sft.jsonl",
+  "validation_data": "data/expert_validation/sft.jsonl",
+  "output_dir": "runs/probe8b_colab_sft",
+  "seed": 42,
+  "max_length": 2048,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "batch_size": 1,
+  "gradient_accumulation": 32,
+  "learning_rate": 0.0001,
+  "epochs": 1,
+  "quantize": true,
+  "gradient_checkpointing": true,
+  "logging_steps": 5,
+  "eval_steps": 50,
+  "save_steps": 50
+}

@@ -1,0 +1,70 @@
+{
+  "synthetic": false,
+  "run_fingerprint": "16a98489a7cee2022482ea514036537ec0291161aea97455b48128af1c74a54a",
+  "dataset_hash": "49c2d17a1e65b4736c6e48837a3824fa521ba3e622a29aba54e49ad73061a90e",
+  "expected_examples": 300,
+  "budgets": {
+    "512": {
+      "pass_at_1": 0.24333333333333335,
+      "missing_requests": 0,
+      "length_stops": 0,
+      "per_language": {
+        "en": 0.23333333333333334,
+        "es": 0.25,
+        "ca": 0.26666666666666666,
+        "ar": 0.18333333333333332,
+        "lb": 0.2833333333333333
+      },
+      "worst_language": 0.18333333333333332,
+      "per_view": {
+        "base": 0.16666666666666666,
+        "paraphrase": 0.16666666666666666,
+        "distractor": 0.15,
+        "counterfactual": 0.0,
+        "boundary": 0.7333333333333333
+      },
+      "per_family": {
+        "journey": 0.17,
+        "production": 0.36,
+        "interest": 0.2
+      },
+      "per_status_observed": {
+        "solved": 0.12184873949579832,
+        "needs_clarification": 0.9,
+        "infeasible": 0.4
+      },
+      "all_views_correct": 0.0,
+      "group_mean_accuracy_ci95": [
+        0.15666666666666668,
+        0.36000000000000004
+      ],
+      "ci_scope": "root-world bootstrap conditional on the included families; not unseen-family uncertainty",
+      "mean_completion_tokens": 140.61,
+      "token_usage_coverage": 1.0,
+      "mean_request_latency_seconds": 4.403757114154481,
+      "actual_api_or_generation_attempts": 300,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "total_joules": null,
+      "joules_per_correct_answer": null,
+      "energy_coverage": 0.0,
+      "mean_policy_regret_valid_only": null,
+      "policy_regret_coverage": 0.0,
+      "group_scores": {
+        "969c2acde3ea4203cf508bfc": 0.16,
+        "4bb9ec66c121bd3cefbd3905": 0.72,
+        "b4803e7473d6c095a77d329f": 0.2,
+        "51182cfd062de15d869c37f1": 0.16,
+        "fa99dfef9cd2a501a9b07076": 0.04,
+        "83400982d11c313bb1975253": 0.2,
+        "408c7f64a34c51b24cd83fe7": 0.2,
+        "d96e58e03d768bf53b982fa8": 0.56,
+        "7444ab106feaf26abd824c66": 0.2,
+        "9653e19a0a635fc8129a98dd": 0.16,
+        "07860275b4bffddb220e8ce2": 0.12,
+        "603f5078eaec661ede22a9d9": 0.2
+      },
+      "all_collected_samples": 300
+    }
+  }
+}

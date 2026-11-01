@@ -1,0 +1,68 @@
+{
+  "synthetic": false,
+  "run_fingerprint": "b55aaef065776d9b19f2c157d10ef439ee69dffdd032a1c87c8473c489677dec",
+  "dataset_hash": "49c2d17a1e65b4736c6e48837a3824fa521ba3e622a29aba54e49ad73061a90e",
+  "expected_examples": 300,
+  "budgets": {
+    "2048": {
+      "pass_at_1": 0.013333333333333334,
+      "missing_requests": 276,
+      "length_stops": 16,
+      "per_language": {
+        "en": 0.03333333333333333,
+        "es": 0.0,
+        "ca": 0.0,
+        "ar": 0.0,
+        "lb": 0.03333333333333333
+      },
+      "worst_language": 0.0,
+      "per_view": {
+        "base": 0.05,
+        "paraphrase": 0.0,
+        "distractor": 0.0,
+        "counterfactual": 0.016666666666666666,
+        "boundary": 0.0
+      },
+      "per_family": {
+        "journey": 0.02,
+        "production": 0.02,
+        "interest": 0.0
+      },
+      "per_status_observed": {
+        "solved": 0.5
+      },
+      "all_views_correct": 0.0,
+      "group_mean_accuracy_ci95": [
+        0.0,
+        0.03333333333333333
+      ],
+      "ci_scope": "root-world bootstrap conditional on the included families; not unseen-family uncertainty",
+      "mean_completion_tokens": 1878.2916666666667,
+      "token_usage_coverage": 0.08,
+      "mean_request_latency_seconds": 35.569386769246194,
+      "actual_api_or_generation_attempts": 24,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "total_joules": null,
+      "joules_per_correct_answer": null,
+      "energy_coverage": 0.0,
+      "mean_policy_regret_valid_only": null,
+      "policy_regret_coverage": 0.0,
+      "group_scores": {
+        "969c2acde3ea4203cf508bfc": 0.0,
+        "4bb9ec66c121bd3cefbd3905": 0.08,
+        "b4803e7473d6c095a77d329f": 0.0,
+        "51182cfd062de15d869c37f1": 0.08,
+        "fa99dfef9cd2a501a9b07076": 0.0,
+        "83400982d11c313bb1975253": 0.0,
+        "408c7f64a34c51b24cd83fe7": 0.0,
+        "d96e58e03d768bf53b982fa8": 0.0,
+        "7444ab106feaf26abd824c66": 0.0,
+        "9653e19a0a635fc8129a98dd": 0.0,
+        "07860275b4bffddb220e8ce2": 0.0,
+        "603f5078eaec661ede22a9d9": 0.0
+      },
+      "all_collected_samples": 24
+    }
+  }
+}

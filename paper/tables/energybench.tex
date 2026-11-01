@@ -1,0 +1,19 @@
+\begin{table}[t]
+\caption{Previously published reasoning benchmark: whole-response reference similarity (S) and secondary key-value match (K). K is a heuristic numeric-presence measure, not exact answer accuracy. Raw Phi-4 is excluded because of empty outputs and incomplete coverage; dashes denote unevaluated conditions. Diverse and concise identify the v4 and v4b curricula. These are initial selected checkpoints (Phi-4 seed 42); replicated results appear in Table~\ref{tab:replicated}.}\label{tab:energybench}
+\centering\small\begin{tabular}{lrrrr}\toprule
+Checkpoint & Raw S & Raw K & Chat S & Chat K\\\midrule
+Qwen3-8B base & 0.354 & 0.306 & 0.445 & 0.457\\
+Qwen3-8B mined & 0.437 & 0.525 & 0.523 & 0.746\\
+Qwen3-8B diverse & 0.458 & 0.505 & 0.492 & 0.561\\
+Qwen3-8B concise & 0.520 & 0.717 & 0.585 & 0.834\\
+Qwen3-14B base & 0.359 & 0.374 & 0.446 & 0.450\\
+Qwen3-14B random & 0.376 & 0.421 & 0.482 & 0.641\\
+Qwen3-14B mixed50 & 0.426 & 0.534 & --- & ---\\
+Phi-4 base & --- & --- & 0.424 & 0.374\\
+Phi-4 mined & --- & --- & 0.446 & 0.633\\
+Phi-4-mini base & 0.505 & 0.548 & 0.513 & 0.576\\
+Phi-4-mini mined & 0.427 & 0.418 & 0.514 & 0.637\\
+Phi-4-mini random & 0.392 & 0.363 & 0.521 & 0.624\\
+Phi-4-mini diverse & 0.509 & 0.574 & 0.477 & 0.546\\
+Phi-4-mini concise & 0.524 & 0.599 & 0.483 & 0.641\\
+\bottomrule\end{tabular}\end{table}

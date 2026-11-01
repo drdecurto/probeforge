@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": {
+    "gold_accepted": 12480,
+    "wrong_answer_or_status_rejected": 12480,
+    "independent_root_problems": 120,
+    "unique_example_ids": 12480,
+    "boundary_unique_worlds": 120,
+    "boundary_root_instances": 120,
+    "boundary_instances_overlapping_exclusion_inventory": 0
+  },
+  "schema_audit": {
+    "rows": 12480,
+    "groups": 120,
+    "families": 3,
+    "passed": true
+  }
+}

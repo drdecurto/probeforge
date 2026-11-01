@@ -1,0 +1,46 @@
+{
+  "archived_datasets": [
+    {
+      "archive": "round1_sft60_adapters_eval.tgz",
+      "member": "data/contrast60/test.jsonl",
+      "rows": 300
+    },
+    {
+      "archive": "round1_sft60_adapters_eval.tgz",
+      "member": "data/contrast60/validation.jsonl",
+      "rows": 300
+    },
+    {
+      "archive": "round1_sft60_adapters_eval.tgz",
+      "member": "data/contrast60/train.jsonl",
+      "rows": 1600
+    },
+    {
+      "archive": "round3_v2_13lang.tgz",
+      "member": "data/contrast13m_200/test_eval12.jsonl",
+      "rows": 1248
+    },
+    {
+      "archive": "round3_v2_13lang.tgz",
+      "member": "data/contrast13m_200/test.jsonl",
+      "rows": 4160
+    },
+    {
+      "archive": "round3_v2_13lang.tgz",
+      "member": "data/contrast13m_200/validation.jsonl",
+      "rows": 4160
+    },
+    {
+      "archive": "round3_v2_13lang.tgz",
+      "member": "data/contrast13m_200/train.jsonl",
+      "rows": 21671
+    }
+  ],
+  "reconstructed": {
+    "seed": 42,
+    "groups": 1000,
+    "note": "Documented larger generator setting reconstructed, not remote contents verified."
+  },
+  "unique_semantic_worlds": 3770,
+  "limitation": "No live cluster inspection; excludes locally archived datasets and reconstructed documented seed-42 generator. Does not prove absence from other datasets or pretraining."
+}

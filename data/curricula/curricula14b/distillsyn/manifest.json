@@ -1,0 +1,41 @@
+{
+ "strategy": "random",
+ "seed": 42,
+ "synthetic_rollouts_allowed": false,
+ "source_hash": "1b2633b539ed39fa6490692a1900dbebac3659535f2347a3c9674cf2d2b2a3f8",
+ "rollout_runs": [
+  "07d592d3fcfc2b316fa674196415ad6ecd189316088a91a83b44416d87f9e2f2"
+ ],
+ "training_rows": 8476,
+ "unique_training_examples": 8476,
+ "validation_rows": 4160,
+ "exposure_cycles": 1,
+ "training_sequence_tokens": 2988657,
+ "requested_token_budget": 3000000,
+ "targets": "worked",
+ "token_budget_note": "Full prompt+completion tokens; no padding or GPU-FLOP equivalence implied. Train exactly one epoch.",
+ "preference_counts": {
+  "train": 2175,
+  "validation": 636
+ },
+ "mixed_mode": {
+  "frac": 0.5,
+  "seed": 1,
+  "traces": [
+   "/gpfs/scratch/bsc21/bsc021885/cf/data/student_base14b_think.jsonl"
+  ],
+  "fill": "synthetic",
+  "append_derivation": false,
+  "traces_available": 1004,
+  "train": {
+   "rows": 8476,
+   "distilled_rows": 1004,
+   "synthetic_rows": 3234
+  },
+  "validation": {
+   "rows": 4160,
+   "distilled_rows": 0,
+   "synthetic_rows": 2080
+  }
+ }
+}

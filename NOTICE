@@ -1,0 +1,15 @@
+ProbeForge / ContrastForge
+Copyright (c) 2026 J. de Curtò and I. de Zarzà. Code and authored data are released under the MIT License.
+
+No model weights or adapters are distributed in this repository. Base checkpoints used in the study
+(Qwen3-8B/14B/32B, Phi-4, Phi-4-mini-instruct, Aya-Expanse-8B, GLM-4.7-Flash, GLM-5.3, Muse-Spark-Open and the
+comparison checkpoints) remain subject to their own licenses and terms.
+
+Third-party data:
+- data/gsm8k_multilingual_verified/ is derived from the GSM8K training split (Cobbe et al., 2021; MIT License):
+  machine-translated problems with model-generated solutions, kept only when the final number matches the
+  GSM8K reference. Translations and solutions were produced with Qwen3-14B.
+- data/energybench_langs/ contains the problems of the previously published multilingual reasoning benchmark
+  (de Zarzà et al., Electronics 15(7):1395, 2026), redistributed by its authors. Please cite that article.
+- Standard-benchmark scores (Belebele, Global-MMLU-Lite, MGSM) were computed with lm-evaluation-harness;
+  the benchmark datasets themselves are not redistributed here.

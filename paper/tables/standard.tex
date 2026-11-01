@@ -1,0 +1,30 @@
+\begin{table*}[t]
+\caption{Initial selected-checkpoint generalization and retention across 24 configurations (Phi-4 seed 42); Table~\ref{tab:replicated} adds replicated and Aya results. Scores average 12 Belebele, eight Global-MMLU-Lite, and six MGSM language subsets. Parentheses give the absolute change from the corresponding unadapted checkpoint; \textbf{bold} marks positive changes, not statistical significance. The lower block provides external context, not an estimate of training benefit. MGSM uses strict extraction; the alternative is reported in Table~\ref{tab:extraction}.}\label{tab:standard}
+\centering\footnotesize\setlength{\tabcolsep}{4pt}\begin{tabular}{lrrr}\toprule
+Checkpoint & Belebele & Global-MMLU-Lite & MGSM strict\\\midrule
+Qwen3-14B base & 0.892 & 0.729 & 0.857\\
+Qwen3-14B random & 0.890 (-0.001) & 0.720 (-0.009) & \textbf{0.871 (0.015)}\\
+Qwen3-14B mined & 0.890 (-0.002) & 0.721 (-0.008) & \textbf{0.883 (0.026)}\\
+Qwen3-14B v3mined & 0.889 (-0.002) & 0.718 (-0.011) & \textbf{0.883 (0.027)}\\
+Qwen3-14B distill & 0.889 (-0.002) & 0.722 (-0.007) & \textbf{0.872 (0.015)}\\
+Qwen3-14B mixed50 & \textbf{0.893 (0.002)} & 0.719 (-0.010) & \textbf{0.879 (0.022)}\\
+Qwen3-8B base & 0.856 & 0.710 & 0.805\\
+Qwen3-8B mined & \textbf{0.862 (0.006)} & 0.708 (-0.002) & \textbf{0.844 (0.039)}\\
+Qwen3-8B v3random & \textbf{0.860 (0.004)} & 0.710 (0.000) & \textbf{0.855 (0.050)}\\
+Qwen3-8B diverse & \textbf{0.862 (0.006)} & 0.702 (-0.008) & \textbf{0.836 (0.031)}\\
+Qwen3-8B concise & \textbf{0.869 (0.013)} & 0.708 (-0.002) & \textbf{0.816 (0.011)}\\
+Phi-4 base & 0.838 & 0.705 & 0.787\\
+Phi-4 mined & \textbf{0.856 (0.018)} & \textbf{0.738 (0.032)} & \textbf{0.825 (0.038)}\\
+Phi-4-mini base & 0.761 & 0.581 & 0.723\\
+Phi-4-mini mined & 0.749 (-0.012) & 0.575 (-0.005) & 0.705 (-0.018)\\
+Phi-4-mini random & 0.737 (-0.023) & \textbf{0.582 (0.001)} & 0.710 (-0.013)\\
+Phi-4-mini diverse & 0.750 (-0.011) & 0.562 (-0.018) & \textbf{0.755 (0.033)}\\
+Phi-4-mini concise & \textbf{0.764 (0.004)} & 0.566 (-0.015) & 0.719 (-0.004)\\
+\midrule\multicolumn{4}{l}{\textit{Additional unadapted comparison checkpoints}}\\
+Llama 3.1 8B Instruct~\cite{llama31card} & 0.796 & 0.604 & 0.682\\
+Gemma 3 12B IT~\cite{gemma3card} & 0.884 & 0.713 & 0.816\\
+Salamandra 7B Instruct~\cite{salamandracard} & 0.597 & 0.512 & 0.220\\
+Qwen2.5 7B Instruct~\cite{qwen25report} & 0.826 & 0.690 & 0.740\\
+Aya Expanse 8B~\cite{aya2024} & 0.737 & 0.540 & 0.707\\
+EuroLLM 9B Instruct~\cite{eurollmcard} & 0.698 & 0.593 & 0.544\\
+\bottomrule\end{tabular}\end{table*}

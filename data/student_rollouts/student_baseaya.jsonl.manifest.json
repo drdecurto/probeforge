@@ -1,0 +1,24 @@
+{
+ "fingerprint": "5ff26252c9e6fd3fac1b8c33112e860a3c9217704e127dd3c287734065fa5fe8",
+ "config": {
+  "backend": "local",
+  "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/aya-expanse-8b",
+  "revision": "main",
+  "adapter": null,
+  "base_url": null,
+  "quantize": false,
+  "vision": false,
+  "seed": 42,
+  "temperature": 0,
+  "budgets": [
+   512
+  ],
+  "samples": 1,
+  "input_hash": "1b2633b539ed39fa6490692a1900dbebac3659535f2347a3c9674cf2d2b2a3f8",
+  "synthetic": false,
+  "nvml_indices": null,
+  "api_extra": null,
+  "thinking": false,
+  "model_fingerprint": "d79140bac833fdb84ad95888c769bfad4b9ca94f0afc56272dbb8d4eac143d5f"
+ }
+}

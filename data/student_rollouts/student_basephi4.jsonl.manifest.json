@@ -1,0 +1,24 @@
+{
+ "fingerprint": "a79d7df3bd7caff1f23335b4781b66817dc83da5da4d588845f7f0e4a9bf11cf",
+ "config": {
+  "backend": "local",
+  "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/phi-4",
+  "revision": "main",
+  "adapter": null,
+  "base_url": null,
+  "quantize": false,
+  "vision": false,
+  "seed": 42,
+  "temperature": 0,
+  "budgets": [
+   512
+  ],
+  "samples": 1,
+  "input_hash": "1b2633b539ed39fa6490692a1900dbebac3659535f2347a3c9674cf2d2b2a3f8",
+  "synthetic": false,
+  "nvml_indices": null,
+  "api_extra": null,
+  "thinking": false,
+  "model_fingerprint": "b726a62aa899ed96b9ffe11cb42ee86c04b62af22e5003a3b0cc3ff8d83727fc"
+ }
+}

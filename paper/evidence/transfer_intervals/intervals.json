@@ -1,0 +1,35 @@
+{
+  "replicates": 10000,
+  "seed": 20261028,
+  "cluster": "problem index, language versions and response repeats retained; scores averaged across three fixed training seeds",
+  "results": [
+    {
+      "model": "8b",
+      "protocol": "out",
+      "delta": 0.15993209878928372,
+      "low": 0.13548861197903866,
+      "high": 0.1850205051362057
+    },
+    {
+      "model": "8b",
+      "protocol": "out_chat",
+      "delta": 0.12009978162495127,
+      "low": 0.08566046287913204,
+      "high": 0.15590939009524502
+    },
+    {
+      "model": "14b",
+      "protocol": "out",
+      "delta": 0.04421670621062608,
+      "low": 0.03338812103985775,
+      "high": 0.05620790152945378
+    },
+    {
+      "model": "14b",
+      "protocol": "out_chat",
+      "delta": 0.12301398764775616,
+      "low": 0.0888665619818701,
+      "high": 0.15779519855940716
+    }
+  ]
+}

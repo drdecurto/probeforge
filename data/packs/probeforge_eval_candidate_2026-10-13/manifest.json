@@ -1,0 +1,97 @@
+{
+  "status": "candidate; not run on models; no experiment folder modified",
+  "seed": 2026101307,
+  "root_problems": 120,
+  "families": [
+    "journey",
+    "production",
+    "interest"
+  ],
+  "languages": [
+    "en",
+    "es",
+    "ca",
+    "ar",
+    "lb",
+    "eu",
+    "fr",
+    "pt",
+    "it",
+    "de",
+    "ru",
+    "zh-cn",
+    "zh-tw"
+  ],
+  "views_per_root": 8,
+  "files": {
+    "test_core60.jsonl": {
+      "roots": 60,
+      "rows": 6240,
+      "role": "fresh same-generator confirmation; do not tune on it"
+    },
+    "test_diagnostic60.jsonl": {
+      "roots": 60,
+      "rows": 6240,
+      "role": "arithmetic and constraint development diagnostics"
+    },
+    "pilot_diagnostic12.jsonl": {
+      "roots": 12,
+      "rows": 1248,
+      "role": "subset of diagnostic60; never count as additional data"
+    }
+  },
+  "training_eligible": false,
+  "split": "test",
+  "strata_per_family": {
+    "journey": [
+      "equal_time_integer",
+      "unequal_time",
+      "unequal_distance_repeating",
+      "equal_distance_harmonic"
+    ],
+    "production": [
+      "unique_optimum",
+      "profit_ties",
+      "binding_minimum",
+      "unused_capacity"
+    ],
+    "interest": [
+      "integer_result",
+      "terminating_fraction",
+      "repeating_fraction",
+      "long_horizon"
+    ]
+  },
+  "translation_review": "Existing authored 13-language templates reused; not independently bilingual-reviewed.",
+  "limitations": [
+    "Only three existing held-out families; not evidence of general reasoning or new-family transfer.",
+    "English JSON keys and canonical-unit suffix retained for compatibility.",
+    "Historical paraphrases are wrappers; no new independently authored paraphrase coverage.",
+    "Core interest/journey boundaries omit years/speed_a rather than principal/distance_a to avoid duplicate historical questions; report boundary accuracy separately for historical comparisons.",
+    "Number-class-matched counterfactuals control integer/terminating/repeating class only, not numerator size or reasoning difficulty.",
+    "Exact duplicate exclusion does not establish absence from pretraining or uninspected cluster data.",
+    "No tokenizer preflight or GPU execution performed."
+  ],
+  "validation": {
+    "gold_accepted": 12480,
+    "wrong_answer_or_status_rejected": 12480,
+    "independent_root_problems": 120,
+    "unique_example_ids": 12480,
+    "boundary_unique_worlds": 120,
+    "boundary_root_instances": 120,
+    "boundary_instances_overlapping_exclusion_inventory": 0
+  },
+  "audit": {
+    "rows": 12480,
+    "groups": 120,
+    "families": 3,
+    "passed": true
+  },
+  "file_sha256": {
+    "answer_key.jsonl": "e22836f4887c17d261b52a1eab48a2ad37a0098c364e0aa8fab42a48f269e396",
+    "pilot_diagnostic12.jsonl": "beabd85ba291c94d9d3f8a882c3636658fd6e87c1bb4128fdfed0989b6ab9896",
+    "root_catalog.jsonl": "5e5443d648c712b8f7df31f7a04fb6f8ccd8ad95ca1dd03790ffa58f588aeb96",
+    "test_core60.jsonl": "c7940ecea128af5f7894adb4842c3e2736b415c5df2e0875244a826cdf91486f",
+    "test_diagnostic60.jsonl": "005f2742a66035b017c6b927e65a383467376de4342d48b79c627959a6852361"
+  }
+}

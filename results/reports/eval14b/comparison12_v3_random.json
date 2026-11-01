@@ -1,0 +1,15 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_random.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_v3_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.004006410256410253,
+      "paired_ci95": [
+        -0.07612179487179488,
+        0.06330128205128205
+      ],
+      "groups": 12
+    }
+  ]
+}

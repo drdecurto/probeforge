@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=cf-sft14b
+#SBATCH --account=bsc21
+#SBATCH --qos=acc_debug
+#SBATCH --partition=acc
+#SBATCH --nodes=1
+#SBATCH --ntasks=3
+#SBATCH --cpus-per-task=20
+#SBATCH --gres=gpu:3
+#SBATCH --time=02:00:00
+#SBATCH --output=/gpfs/scratch/bsc21/bsc021885/cf/logs/%x-%j.out
+#SBATCH --error=/gpfs/scratch/bsc21/bsc021885/cf/logs/%x-%j.err
+set -uo pipefail
+source ~/probeforge/slurm/environment.sh; S=/gpfs/scratch/bsc21/bsc021885/cf; cd ~/probeforge; K=0
+for arm in translated random mined; do
+  R=""; [ -d $S/runs/sft14b_$arm ] && ls $S/runs/sft14b_$arm | grep -q checkpoint- && R="--resume latest"
+  CUDA_VISIBLE_DEVICES=$K srun --exact --ntasks=1 --cpus-per-task=20 --gres=gpu:1 --cpu-bind=none --output=/gpfs/scratch/bsc21/bsc021885/cf/logs/sft14b-$arm.out --error=/gpfs/scratch/bsc21/bsc021885/cf/logs/sft14b-$arm.err contrastforge train --config configs/v14b_$arm.json $R &
+  K=$((K+1))
+done
+wait; echo "end $(date)"

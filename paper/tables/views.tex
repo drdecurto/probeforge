@@ -1,0 +1,19 @@
+\begin{table}[!htbp]
+\caption{View-level accuracy. Last two columns refer to diag60; other columns refer to the main benchmark.}\label{tab:views-ext}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+View & 8B base & 8B mined & 14B base & 14B random & 8B diag & 14B diag\\\midrule
+base & 0.000 & 0.271 & 0.032 & 0.415 & 0.264 & 0.382\\
+paraphrase & 0.000 & 0.303 & 0.077 & 0.408 & 0.287 & 0.369\\
+distractor & 0.000 & 0.293 & 0.045 & 0.412 & 0.274 & 0.383\\
+ctx. academic & 0.006 & 0.303 & 0.064 & 0.412 & 0.273 & 0.365\\
+ctx. business & 0.000 & 0.282 & 0.064 & 0.404 & 0.259 & 0.363\\
+expansion & 0.000 & 0.286 & 0.038 & 0.406 & 0.278 & 0.379\\
+boundary & 0.282 & 0.795 & 0.333 & 0.803 & 0.444 & 0.500\\
+counterfactual & 0.000 & 0.009 & 0.006 & 0.043 & 0.319 & 0.468\\
+\bottomrule
+\end{tabular}}
+\end{table}

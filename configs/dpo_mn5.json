@@ -1,0 +1,19 @@
+{
+  "model": "models/Qwen3-8B",
+  "init_adapter": "runs/probe8b_sft_seed42",
+  "train_data": "data/reference_train.jsonl",
+  "validation_data": "data/reference_validation.jsonl",
+  "output_dir": "runs/probe8b_dpo_seed42",
+  "seed": 42,
+  "max_length": 2048,
+  "batch_size": 1,
+  "gradient_accumulation": 8,
+  "learning_rate": 0.000005,
+  "epochs": 1,
+  "beta": 0.1,
+  "quantize": false,
+  "gradient_checkpointing": true,
+  "logging_steps": 10,
+  "eval_steps": 100,
+  "save_steps": 100
+}

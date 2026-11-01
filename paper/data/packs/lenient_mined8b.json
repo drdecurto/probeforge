@@ -1,0 +1,140 @@
+{
+ "all/all": {
+  "n": 1824,
+  "strict": 0.202,
+  "lenient": 0.22,
+  "format_only_failures": 34
+ },
+ "family/retention_conditional_probability": {
+  "n": 256,
+  "strict": 0.059,
+  "lenient": 0.07,
+  "format_only_failures": 3
+ },
+ "family/retention_dependency_schedule": {
+  "n": 256,
+  "strict": 0.09,
+  "lenient": 0.09,
+  "format_only_failures": 0
+ },
+ "family/retention_inventory_balance": {
+  "n": 256,
+  "strict": 0.238,
+  "lenient": 0.238,
+  "format_only_failures": 0
+ },
+ "family/retention_linear_optimization": {
+  "n": 288,
+  "strict": 0.403,
+  "lenient": 0.403,
+  "format_only_failures": 0
+ },
+ "family/retention_modular_schedule": {
+  "n": 256,
+  "strict": 0.07,
+  "lenient": 0.07,
+  "format_only_failures": 0
+ },
+ "family/retention_reverse_percentage": {
+  "n": 256,
+  "strict": 0.09,
+  "lenient": 0.09,
+  "format_only_failures": 0
+ },
+ "family/retention_unit_conversion": {
+  "n": 256,
+  "strict": 0.438,
+  "lenient": 0.559,
+  "format_only_failures": 31
+ },
+ "language/en": {
+  "n": 912,
+  "strict": 0.179,
+  "lenient": 0.197,
+  "format_only_failures": 17
+ },
+ "language/es": {
+  "n": 912,
+  "strict": 0.225,
+  "lenient": 0.243,
+  "format_only_failures": 17
+ },
+ "status/infeasible": {
+  "n": 224,
+  "strict": 0.125,
+  "lenient": 0.125,
+  "format_only_failures": 0
+ },
+ "status/needs_clarification": {
+  "n": 224,
+  "strict": 0.0,
+  "lenient": 0.0,
+  "format_only_failures": 0
+ },
+ "status/solved": {
+  "n": 1344,
+  "strict": 0.241,
+  "lenient": 0.266,
+  "format_only_failures": 34
+ },
+ "status/unbounded": {
+  "n": 32,
+  "strict": 0.5,
+  "lenient": 0.5,
+  "format_only_failures": 0
+ },
+ "view/base": {
+  "n": 224,
+  "strict": 0.246,
+  "lenient": 0.277,
+  "format_only_failures": 7
+ },
+ "view/counterfactual": {
+  "n": 224,
+  "strict": 0.259,
+  "lenient": 0.295,
+  "format_only_failures": 8
+ },
+ "view/distractor": {
+  "n": 224,
+  "strict": 0.272,
+  "lenient": 0.295,
+  "format_only_failures": 5
+ },
+ "view/fact_reorder": {
+  "n": 224,
+  "strict": 0.156,
+  "lenient": 0.165,
+  "format_only_failures": 2
+ },
+ "view/infeasible": {
+  "n": 224,
+  "strict": 0.125,
+  "lenient": 0.125,
+  "format_only_failures": 0
+ },
+ "view/missing_optional": {
+  "n": 224,
+  "strict": 0.286,
+  "lenient": 0.312,
+  "format_only_failures": 6
+ },
+ "view/missing_required": {
+  "n": 224,
+  "strict": 0.0,
+  "lenient": 0.0,
+  "format_only_failures": 0
+ },
+ "view/paraphrase": {
+  "n": 224,
+  "strict": 0.228,
+  "lenient": 0.254,
+  "format_only_failures": 6
+ },
+ "view/unbounded": {
+  "n": 32,
+  "strict": 0.5,
+  "lenient": 0.5,
+  "format_only_failures": 0
+ }
+}

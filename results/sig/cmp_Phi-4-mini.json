@@ -1,0 +1,85 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4mini/report12_base.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4mini/report12_translated.json",
+      "budget": "512",
+      "mean_paired_group_difference": -0.04807692307692307,
+      "paired_ci95": [
+        -0.06009615384615385,
+        -0.0344551282051282
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4mini/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.11217948717948718,
+      "paired_ci95": [
+        0.05608974358974359,
+        0.21875
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalphi4mini/report12_mined.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.09775641025641026,
+      "paired_ci95": [
+        0.0641025641025641,
+        0.14503205128205127
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4/report12_v4_phi4mini.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.11137820512820513,
+      "paired_ci95": [
+        0.044070512820512824,
+        0.2075320512820513
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4b/report12_v4b_phi4mini.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.15384615384615383,
+      "paired_ci95": [
+        0.06490384615384616,
+        0.2740384615384615
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_phi4mini_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.16105769230769232,
+      "paired_ci95": [
+        0.07051282051282051,
+        0.28685897435897434
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_phi4mini_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.15064102564102563,
+      "paired_ci95": [
+        0.06169871794871795,
+        0.28365384615384615
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalv4c/report12_phi4mini_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.18509615384615385,
+      "paired_ci95": [
+        0.07131410256410257,
+        0.328525641025641
+      ],
+      "groups": 12
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "reference/contrastforge/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reference/contrastforge/dataset.py": "d347a24fa315514e37403a7f9b26a7e59d523496548bbb0aa7005f64329f6271",
+  "reference/contrastforge/languages.py": "385b1d14ba17f1ca3646347acb4fa160533962e982895abc7167d09acf1ad7ad",
+  "reference/contrastforge/verify.py": "bb513bfbe0366b239d57b23505de077c88dc4f24624b9503cc2ab7cc3cdfeecf",
+  "reference/contrastforge/worlds.py": "7c1a2516abccf84ffd2a36a6a17563592106bb8ce2161208201ac9e2325baeb8",
+  "reference/probeforge/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reference/probeforge/io.py": "1ec27621b4769c2558ab8c48158a13640e65d6e91eea745b413af9c9c80ef571"
+}

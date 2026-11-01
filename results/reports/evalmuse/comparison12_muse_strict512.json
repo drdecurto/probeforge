@@ -1,0 +1,25 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_base14b.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/evalmuse/report12_muse_early.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.06650641025641026,
+      "paired_ci95": [
+        -0.06490384615384615,
+        0.16105769230769232
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/eval14b/report12_random.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3261217948717949,
+      "paired_ci95": [
+        0.12980769230769232,
+        0.5344551282051282
+      ],
+      "groups": 12
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "synthetic": false,
+  "run_fingerprint": "1a9569f9b6be024d3a3b900c2878ac38e6e5d5240a5a0b6065654f0e09e79074",
+  "dataset_hash": "13f3ef7e0b6a1ad9f6f5946371792dbe6bc9c9d5863188a4712d11eb8beb9124",
+  "expected_examples": 1248,
+  "budgets": {
+    "512": {
+      "pass_at_1": 0.25961538461538464,
+      "missing_requests": 0,
+      "length_stops": 0,
+      "per_language": {
+        "en": 0.2916666666666667,
+        "es": 0.25,
+        "ca": 0.25,
+        "ar": 0.2604166666666667,
+        "lb": 0.25,
+        "eu": 0.25,
+        "fr": 0.2604166666666667,
+        "pt": 0.25,
+        "it": 0.25,
+        "de": 0.2708333333333333,
+        "ru": 0.25,
+        "zh-cn": 0.2604166666666667,
+        "zh-tw": 0.28125
+      },
+      "worst_language": 0.25,
+      "per_view": {
+        "base": 0.1858974358974359,
+        "paraphrase": 0.16666666666666666,
+        "distractor": 0.1858974358974359,
+        "counterfactual": 0.00641025641025641,
+        "boundary": 1.0,
+        "context_academic": 0.16666666666666666,
+        "context_business": 0.15384615384615385,
+        "expansion": 0.21153846153846154
+      },
+      "per_family": {
+        "journey": 0.15625,
+        "production": 0.49759615384615385,
+        "interest": 0.125
+      },
+      "per_status_observed": {
+        "solved": 0.15384615384615385,
+        "needs_clarification": 1.0,
+        "infeasible": 1.0
+      },
+      "all_views_correct": 0.0,
+      "group_mean_accuracy_ci95": [
+        0.13060897435897437,
+        0.4383012820512821
+      ],
+      "ci_scope": "root-world bootstrap conditional on the included families; not unseen-family uncertainty",
+      "mean_completion_tokens": 105.05448717948718,
+      "token_usage_coverage": 1.0,
+      "mean_request_latency_seconds": 3.10502257334305,
+      "actual_api_or_generation_attempts": 1248,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "total_joules": null,
+      "joules_per_correct_answer": null,
+      "energy_coverage": 0.0,
+      "mean_policy_regret_valid_only": null,
+      "policy_regret_coverage": 0.0,
+      "group_scores": {
+        "969c2acde3ea4203cf508bfc": 0.125,
+        "4bb9ec66c121bd3cefbd3905": 0.8653846153846154,
+        "b4803e7473d6c095a77d329f": 0.125,
+        "51182cfd062de15d869c37f1": 0.22115384615384615,
+        "fa99dfef9cd2a501a9b07076": 0.125,
+        "83400982d11c313bb1975253": 0.125,
+        "408c7f64a34c51b24cd83fe7": 0.14423076923076922,
+        "d96e58e03d768bf53b982fa8": 0.875,
+        "7444ab106feaf26abd824c66": 0.125,
+        "9653e19a0a635fc8129a98dd": 0.1346153846153846,
+        "07860275b4bffddb220e8ce2": 0.125,
+        "603f5078eaec661ede22a9d9": 0.125
+      },
+      "all_collected_samples": 1248
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+ "model": "/gpfs/scratch/bsc21/bsc021885/cf/models/Qwen3-14B",
+ "train_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curricula14b/distill/sft_train.jsonl",
+ "validation_data": "/gpfs/scratch/bsc21/bsc021885/cf/data/curricula14b/distill/sft_validation.jsonl",
+ "output_dir": "/gpfs/scratch/bsc21/bsc021885/cf/runs/sft14b_distill",
+ "seed": 42,
+ "max_length": 4096,
+ "lora_rank": 16,
+ "lora_alpha": 32,
+ "batch_size": 1,
+ "gradient_accumulation": 32,
+ "learning_rate": 0.0001,
+ "epochs": 1,
+ "quantize": false,
+ "gradient_checkpointing": true,
+ "logging_steps": 5,
+ "eval_steps": 50,
+ "save_steps": 50
+}

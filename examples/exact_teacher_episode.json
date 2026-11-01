@@ -1,0 +1,259 @@
+{
+  "task_id": "f7a5a215a6abe88fcca6-w0",
+  "group_id": "f7a5a215a6abe88fcca6",
+  "family": "affine",
+  "split": "train",
+  "success": true,
+  "prediction": [
+    -56,
+    21,
+    18
+  ],
+  "target": [
+    -56,
+    21,
+    18
+  ],
+  "decisions": [
+    {
+      "state": {
+        "family": "affine",
+        "formula": "a*x + b*max(0,x) + c*min(0,x)",
+        "candidate_parameters": [
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            6,
+            2,
+            7
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            6,
+            3,
+            2
+          ],
+          [
+            6,
+            2,
+            2
+          ],
+          [
+            6,
+            3,
+            7
+          ],
+          [
+            1,
+            3,
+            7
+          ]
+        ],
+        "parameter_order": [
+          "a",
+          "b",
+          "c"
+        ],
+        "probes": [
+          {
+            "cost": 1,
+            "id": "p0",
+            "input": 1
+          },
+          {
+            "cost": 2,
+            "id": "p1",
+            "input": 3
+          },
+          {
+            "cost": 1,
+            "id": "p2",
+            "input": -2
+          },
+          {
+            "cost": 1,
+            "id": "p3",
+            "input": -3
+          },
+          {
+            "cost": 1,
+            "id": "p4",
+            "input": -4
+          },
+          {
+            "cost": 2,
+            "id": "p5",
+            "input": 2
+          },
+          {
+            "cost": 1,
+            "id": "p6",
+            "input": 0
+          },
+          {
+            "cost": 1,
+            "id": "p7",
+            "input": 4
+          },
+          {
+            "cost": 1,
+            "id": "p8",
+            "input": -1
+          }
+        ],
+        "targets": [
+          -7,
+          7,
+          6
+        ],
+        "observations": [
+          {
+            "input": 0,
+            "output": 0
+          }
+        ],
+        "remaining_budget": 1
+      },
+      "response": "{\"action\":\"probe\",\"probe_id\":\"p0\"}",
+      "valid": true,
+      "observation": 3
+    },
+    {
+      "state": {
+        "family": "affine",
+        "formula": "a*x + b*max(0,x) + c*min(0,x)",
+        "candidate_parameters": [
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            6,
+            2,
+            7
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            6,
+            3,
+            2
+          ],
+          [
+            6,
+            2,
+            2
+          ],
+          [
+            6,
+            3,
+            7
+          ],
+          [
+            1,
+            3,
+            7
+          ]
+        ],
+        "parameter_order": [
+          "a",
+          "b",
+          "c"
+        ],
+        "probes": [
+          {
+            "cost": 1,
+            "id": "p0",
+            "input": 1
+          },
+          {
+            "cost": 2,
+            "id": "p1",
+            "input": 3
+          },
+          {
+            "cost": 1,
+            "id": "p2",
+            "input": -2
+          },
+          {
+            "cost": 1,
+            "id": "p3",
+            "input": -3
+          },
+          {
+            "cost": 1,
+            "id": "p4",
+            "input": -4
+          },
+          {
+            "cost": 2,
+            "id": "p5",
+            "input": 2
+          },
+          {
+            "cost": 1,
+            "id": "p6",
+            "input": 0
+          },
+          {
+            "cost": 1,
+            "id": "p7",
+            "input": 4
+          },
+          {
+            "cost": 1,
+            "id": "p8",
+            "input": -1
+          }
+        ],
+        "targets": [
+          -7,
+          7,
+          6
+        ],
+        "observations": [
+          {
+            "input": 0,
+            "output": 0
+          },
+          {
+            "input": 1,
+            "output": 3,
+            "probe_id": "p0"
+          }
+        ],
+        "remaining_budget": 0
+      },
+      "response": "{\"action\":\"answer\",\"predictions\":[-56,21,18]}",
+      "valid": true
+    }
+  ],
+  "tool_calls": 1,
+  "budget_spent": 1,
+  "invalid_actions": 0,
+  "completion_tokens": 0,
+  "prompt_tokens": 0,
+  "token_usage_available": false
+}
