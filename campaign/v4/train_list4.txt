@@ -1,0 +1,7 @@
+configs/v4c_phi4_s1.json|sftv4c_phi4_s1
+configs/v4c_phi4_s2.json|sftv4c_phi4_s2
+configs/v4c_phi4_s3.json|sftv4c_phi4_s3
+configs/v4c_aya_own_s2.json|sftv4c_aya_own_s2
+configs/v4c_aya_own_s3.json|sftv4c_aya_own_s3
+configs/vaya_mined_s2.json|sftaya_mined_s2
+configs/vaya_mined_s3.json|sftaya_mined_s3

@@ -1,0 +1,16 @@
+{
+  "version": 14,
+  "pages": 22,
+  "references": 41,
+  "tables": 15,
+  "figures": 11,
+  "clean_source_files": 88,
+  "clean_source_pdf_text_matches": true,
+  "evidence_files_hash_verified": 971,
+  "new_main_rollouts_verified": 28,
+  "overfull_boxes": [
+    "Overfull \\hbox (9.2679pt too wide) in paragraph at lines 38--38",
+    "Overfull \\hbox (9.2679pt too wide) in paragraph at lines 38--38"
+  ],
+  "main_pdf_sha256": "f4c6235150fab3cb0bd1ecd88d8dc4dfa8ef5c7ed7b1d5d96bf333d3c6d2b149"
+}

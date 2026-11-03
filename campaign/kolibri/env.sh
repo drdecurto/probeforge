@@ -1,0 +1,2 @@
+S=/gpfs/scratch/bsc21/bsc021885/cf; unset PYTHONPATH PYTHONUSERBASE PYTHONHOME TRANSFORMERS_CACHE
+export HF_HOME=$S/hf_home HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PATH=$S/envs/koltrain/bin:$PATH CF_PYTHON=$S/envs/koltrain/bin/python

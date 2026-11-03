@@ -12,16 +12,22 @@ python analyze_paired.py              # Table 5 (recomputed from raw responses; 
 python analyze_round20.py             # Table 14 + VALIDATION_ROUND20.json (Qwen3-32B, GLM-4.7-Flash)
 python analyze_transfer_intervals.py  # paired bootstrap intervals for mixed-format transfer
 python analyze_glm53_diagnostics.py   # GLM-5.3 length-stop and failure diagnostics
+python refresh_v14.py                 # post-v13 three-seed aggregates and per-seed intervals → VALIDATION_V14_RESULTS.json
+python refresh_v14_figures.py         # Figures 8–9 with the three-seed Phi-4/Aya replications
+python analyze_paired.py              # run last: Table 5, then refresh_v14_tables.py → Tables 13–15
 ```
 
-Running this sequence regenerates `tables/main.tex`, `replicated.tex`, `paired.tex` and `scale.tex`
-byte-identical to the versions in `tables/` (checked 1 Nov 2026). The other tables are frozen; see `../docs/RESULTS_MAP.md`.
+Running this sequence in this order regenerates `tables/main.tex`, `replicated.tex`, `paired.tex`, `scale.tex` and
+`kolibri_languages.tex` byte-identical to the versions in `tables/` (checked 3 Nov 2026). `refresh_v12.py` and
+`analyze_round20.py` write the v13 (single-seed) forms of Tables 13–14; the final `analyze_paired.py` call
+updates them to the three-seed forms. Recomputed `VALIDATION_V14_RESULTS.json` can differ from the archived
+copy in the last floating-point digit (summation order); every table is unaffected. The other tables are frozen; see `../docs/RESULTS_MAP.md`.
 Do not run `legacy_generators/` or `refresh_v11.py`. They are kept for provenance, write older table
 formats and are superseded by `refresh_v12.py`.
 
 | Folder | Contents |
 |---|---|
-| `evidence/` | Archived reports, selected complete responses, harness outputs, configurations and campaign-log excerpts per round (`round4`…`round20`), plus `paired/`, `transfer_intervals/` and the significance CSVs. `round20/manifest.json` lists SHA-256 hashes. |
+| `evidence/` | Archived reports, selected complete responses, harness outputs, configurations and campaign-log excerpts per round (`round4`…`round20`), plus `paired/`, `transfer_intervals/` and the significance CSVs. `post_v13/` holds the three-seed Qwen3-32B/GLM-4.7-Flash, Phi-4 mixed-format, Aya and Kolibri-1 evidence (reports, complete main-test responses, energy outputs, harness summaries, configs, scripts). `round20/manifest.json` and `post_v13/manifest.json` list SHA-256 hashes. |
 | `data/` | Evaluation reports used by `refresh_figures.py` (rounds 4–19, eval60, packs). |
 | `source_tables/` | CSV snapshot behind the frozen tables. |
 | `tables/`, `figures/` | The LaTeX tables and figure files used in the accompanying study. |

@@ -1,0 +1,81 @@
+{
+  "synthetic": false,
+  "run_fingerprint": "72fb1203c9a9ed7598ba55de9a0d388c86e486f85b49353f490593425606f0f7",
+  "dataset_hash": "13f3ef7e0b6a1ad9f6f5946371792dbe6bc9c9d5863188a4712d11eb8beb9124",
+  "expected_examples": 1248,
+  "budgets": {
+    "512": {
+      "pass_at_1": 0.25961538461538464,
+      "missing_requests": 0,
+      "length_stops": 0,
+      "per_language": {
+        "en": 0.2604166666666667,
+        "es": 0.2604166666666667,
+        "ca": 0.2604166666666667,
+        "ar": 0.2604166666666667,
+        "lb": 0.22916666666666666,
+        "eu": 0.2708333333333333,
+        "fr": 0.2708333333333333,
+        "pt": 0.2604166666666667,
+        "it": 0.2604166666666667,
+        "de": 0.2604166666666667,
+        "ru": 0.2604166666666667,
+        "zh-cn": 0.2604166666666667,
+        "zh-tw": 0.2604166666666667
+      },
+      "worst_language": 0.22916666666666666,
+      "per_view": {
+        "base": 0.16666666666666666,
+        "paraphrase": 0.16666666666666666,
+        "distractor": 0.16666666666666666,
+        "counterfactual": 0.09615384615384616,
+        "boundary": 0.9807692307692307,
+        "context_academic": 0.16666666666666666,
+        "context_business": 0.16666666666666666,
+        "expansion": 0.16666666666666666
+      },
+      "per_family": {
+        "journey": 0.11778846153846154,
+        "production": 0.5360576923076923,
+        "interest": 0.125
+      },
+      "per_status_observed": {
+        "solved": 0.1565934065934066,
+        "needs_clarification": 0.9711538461538461,
+        "infeasible": 1.0
+      },
+      "all_views_correct": 0.08333333333333333,
+      "group_mean_accuracy_ci95": [
+        0.1217948717948718,
+        0.4615384615384615
+      ],
+      "ci_scope": "root-world bootstrap conditional on the included families; not unseen-family uncertainty",
+      "mean_completion_tokens": 105.6386217948718,
+      "token_usage_coverage": 1.0,
+      "mean_request_latency_seconds": 3.1379606302994385,
+      "actual_api_or_generation_attempts": 1248,
+      "failed_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "total_joules": null,
+      "joules_per_correct_answer": null,
+      "energy_coverage": 0.0,
+      "mean_policy_regret_valid_only": null,
+      "policy_regret_coverage": 0.0,
+      "group_scores": {
+        "969c2acde3ea4203cf508bfc": 0.11538461538461539,
+        "4bb9ec66c121bd3cefbd3905": 1.0,
+        "b4803e7473d6c095a77d329f": 0.125,
+        "51182cfd062de15d869c37f1": 0.11538461538461539,
+        "fa99dfef9cd2a501a9b07076": 0.125,
+        "83400982d11c313bb1975253": 0.125,
+        "408c7f64a34c51b24cd83fe7": 0.11538461538461539,
+        "d96e58e03d768bf53b982fa8": 0.8942307692307693,
+        "7444ab106feaf26abd824c66": 0.125,
+        "9653e19a0a635fc8129a98dd": 0.125,
+        "07860275b4bffddb220e8ce2": 0.125,
+        "603f5078eaec661ede22a9d9": 0.125
+      },
+      "all_collected_samples": 1248
+    }
+  }
+}

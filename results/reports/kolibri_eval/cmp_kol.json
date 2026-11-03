@@ -1,0 +1,65 @@
+{
+  "baseline": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolbase.json",
+  "comparisons": [
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolrandom_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3301282051282051,
+      "paired_ci95": [
+        0.13141025641025642,
+        0.5456730769230769
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolrandom_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3709935897435897,
+      "paired_ci95": [
+        0.16506410256410256,
+        0.5865384615384616
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolrandom_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.31169871794871795,
+      "paired_ci95": [
+        0.13381410256410256,
+        0.516826923076923
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolv4c_s1.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.2828525641025641,
+      "paired_ci95": [
+        0.11137820512820512,
+        0.469551282051282
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolv4c_s2.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3886217948717949,
+      "paired_ci95": [
+        0.18429487179487178,
+        0.6017628205128205
+      ],
+      "groups": 12
+    },
+    {
+      "treatment": "/gpfs/scratch/bsc21/bsc021885/cf/kolibri/eval/report12_kolv4c_s3.json",
+      "budget": "512",
+      "mean_paired_group_difference": 0.3365384615384615,
+      "paired_ci95": [
+        0.15224358974358973,
+        0.5344551282051282
+      ],
+      "groups": 12
+    }
+  ]
+}

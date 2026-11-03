@@ -1,0 +1,7 @@
+v4c-phi4_s1|phi-4|sftv4c_phi4_s1
+v4c-phi4_s2|phi-4|sftv4c_phi4_s2
+v4c-phi4_s3|phi-4|sftv4c_phi4_s3
+v4c-aya_own_s2|aya-expanse-8b|sftv4c_aya_own_s2
+v4c-aya_own_s3|aya-expanse-8b|sftv4c_aya_own_s3
+aya-mined_s2|aya-expanse-8b|sftaya_mined_s2
+aya-mined_s3|aya-expanse-8b|sftaya_mined_s3

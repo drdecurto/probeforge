@@ -1,0 +1,49 @@
+### 2026-11-02 evening — round r4 (Phi-4 mixed-format ×3, Aya seeds) + Kolibri-1 probe
+- r4: mixtures mixc_phi4_s{1,2,3} (Phi-4 mined rows, phi-4 tokenizer) and mixc_aya_own_s{2,3}; configs v4c_phi4_s*, v4c_aya_own_s{2,3}, vaya_mined_s{2,3}; train_list4/eval_list4 in v4/; sbatches sft_r4 (2 nodes, 7 arms × 1 GPU), eval_r4 (local collect, evalr4/), energy_r4 (slots_v4c4.txt), stdmerge_r4, std_r4; logs/master_r4.sh launched (job 48424721).
+- Kolibri-1 (Aleph Alpha, 78B MoE, 3.46B active, 384 experts, EN/DE, Apache-2.0, released 2026-10-03): downloaded Kolibri-1-BF16 (156 GB, 40 files verified). envs/kolvllm = vllm 0.29.0 + aleph-alpha-inference 1.0.0 (plugin registered; torch 2.13 cu130, tf 5.22.1). envs/koltrain = vllm32 base + transformers 5.20 + peft 0.18.1 (meta-load OK). Linear LoRA targets: q/k/v/o_proj and shared-expert gate/up/down (routed experts fused 3D). Template supports enable_thinking=False ("<think>\n\n</think>"), eos <|im_end|>.
+- Base probe: kolibri/serve_eval.sh (TP4 bf16, 16-shard API main eval + energy clients on vllm32 python), logs/koleval.sbatch, logs/kolprobe_chain.sh launched.
+- 2026-11-03 02:40 r4 main results: Phi-4 v4c s1/s2/s3 .260/.256/.267 → .261±.006 (bnd .98–.99, cf .04–.10, base view .17); Aya mined s2/s3 .077/.079 (+s1 .080 → .079±.002), Aya v4c-own s2/s3 .078/.077 (+s1 .079 → .078±.001) — boundary-only (base view .00). Energy r4 48429254 running; then merges/std; Kolibri base probe queued after.
+- Kolibri training prepared (not launched; awaits base probe): mixc_kol_s{1,2,3} (Kolibri tokenizer; 11068 rows / 3.36M tokens incl. chat template with its injected system text; random 8476 rows / 3.35M), configs vkol_{random,v4c}_s{1,2,3} + vkol_smoke_* (device_map auto, 56 GiB/GPU, LoRA q/k/v/o + shared-expert gate/up/down). Template renders "<think>\n\n</think>\n\n" + completion + <|im_end|>.
+
+## 2026-11-03 08:12 — Kolibri probe retry
+- First probe (jobs 48432756, 48433484): vLLM server never became ready within the 15-min wait — weight load from GPFS takes ~690 s (32 shards × ~22 s) + torch.compile. Merged file empty → evaluate error was a consequence, not a mixed-run issue.
+- Fix: serve_eval.sh wait 90→270 × 10 s; VLLM_CACHE_ROOT on scratch. kolprobe_chain relaunched 08:11 (queued behind std r4 48439291).
+
+## 2026-11-03 09:45 — Round r4 complete (MASTER_R4 DONE 08:20)
+- Main (from master_r4): Phi-4 v4c s1/s2/s3 .260/.256/.267 → **.261±.006** (base .022; random .341, mined .317 single-seed). Aya v4c_own .078±.001, Aya mined .079±.002 (boundary-only).
+- Energy (sig/r4_energy.py, problem-cluster bootstrap vs base, 3 seeds):
+  - Phi-4 chat: base S .424 / K .374; mined S .459±.014 / K .620±.021; **v4c S .571±.006 / K .764±.016** (all v4c seeds dS ≈ +.14–.15, dK ≈ +.37–.40, CIs exclude 0). Raw protocol: v4c .154/.103 ≈ base .156/.095 (raw Phi-4 completions near-empty, as before).
+  - Aya chat: base .479/.477; mined .486/.454; v4c .477/.496 (all n.s.). Aya raw: mined .457/.393, v4c .423/.384 — **significant drops** vs base .488/.455 (v4c dS ≈ −.06).
+- Standard (Belebele / GMMLU-Lite / MGSM strict), 3-seed means: Phi-4 base .838/.705/.787; mined .851/.736/.823; **v4c .858/.734/.834**. Aya base .737/.540/.707; mined .737/.537/.708; v4c .731/.544/.666 (MGSM −4 pts).
+- Note: master's std table printer omitted v4c-phi4 rows; recovered with stdbench/aggregate.py.
+- Kolibri probe: server up in job 48441601 (wait fix worked), main+energy collection in progress.
+
+## 2026-11-03 09:55 — Kolibri-1 base probe done
+- **KOLBASE main pass@1 .079** (worst lang .000 eu; 222 mean tok; 145/1248 length stops). Views: boundary .61, everything else ≤.01 → boundary-only profile like Aya base. Langs: en .12, pt .11, it .10, eu .00.
+- Energy (Kolibri vLLM, enable_thinking off): raw S .476 / K .548; chat S .489 / K .537 — competitive with Qwen3-32B base (chat .449/.468).
+- Decision: informative (large headroom on main benchmark) → training smoke. `kolibri/env.sh` (koltrain env), `logs/kolsmoke.sbatch` (vkol_smoke_v4c, 3 steps, 4 GPUs, device_map auto 56 GiB) submitted as 48443111.
+
+- 10:12 kolsmoke 48443111 landed on as04r5b02 with no visible GPUs (nvidia-smi "No devices found") → resubmitted 48444815 with --exclude=as04r5b02.
+- 10:50 **Kolibri smoke OK** (48444815): 26.2M trainable params (LoRA r16 on attention + shared-expert MLPs; routed experts frozen), ~31 s/optimizer step (bs1×ga32, 2048 ctx, 4 GPUs naive MP), load ~12 min. Full epoch = 346 steps ≈ 3 h → 2 acc_debug rounds per arm.
+- 10:53 `logs/kolsft_chain.sh` launched detached: `kolsft.sbatch` = 3 nodes × 1 arm each (ARMS trio, --resume latest, save_steps 25, excludes as04r5b02); trios random_s1-3 then v4c_s1-3, loop until metrics.json. First job 48446815. Scratch quota fine (1.47/1.67 PB group) for 6 × 156 GB merges.
+- Next: merge script (apply LoRA deltas directly to original safetensors shards, preserving vLLM plugin key names), then eval via kolibri/serve_eval.sh with KSPECS.
+- 11:00 Kolibri random trio at step 108/265 after 35 min (~17.5 s/step; random arm = 265 steps → finishes in round 1). v4c arms 346 steps.
+- `kolibri/merge_lora.py`: PEFT adapter → original Kolibri shards (W += α/r·B·A, fp32 then bf16; untouched shards/side files symlinked; key names preserved for the vLLM plugin). Test merge on random_s1/checkpoint-100 submitted (gp_debug, `logs/kolmerge.sbatch`, PAIRS="adapter|out").
+- `kolibri/serve_eval.sh` extended with std benchmarks: lm-eval 0.4.9.1 `local-completions` against the Kolibri vLLM server (same task lists, 8-shot MGSM, seed 1234, max_length 4096) → `stdbench/out/kol-<m>/{mc,mgsm}`. (Backend differs from the in-process vllm backend used for other models; prompts are identical raw text.) Base std run queued via `logs/kolstdbase.sh` (acc_debug submit limit → retry loop).
+- 12:40 Merge test OK (48448282): 350 tensors (50 layers × 7 modules) in 32 shards, scale 2.0, max |ΔW|/|W| .134, 3.5 min; test dir removed. Random trio at checkpoint-250/265 at 1:35 job time.
+- `logs/kolpost_chain.sh` launched detached: per trio (random, then v4c) waits for final adapters → gp_debug merge → `koleval3.sbatch` (3 nodes, one model per node via serve_eval.sh: main + energy + std) ×≤4 rounds → dedupe/evaluate/RES lines; final `contrastforge compare` vs kolbase → `kolibri/eval/cmp_kol.json`.
+- 13:30 Runner hung on 619: `cond && cd && nohup setsid ... &` backgrounds the whole list in a subshell that keeps ssh stdout → never use `&&`-list before nohup; asked user to pkill ssh. Chains unaffected (setsid).
+- 14:37 **KOLSFT DONE**: random trio 265 steps (round 1, 48446815), v4c trio 346/346/347 steps (48449573, 1:56). Random trio merged (models/merged/kol_random_s*). 
+- 13:58 Runner restart re-ran 619 → duplicate kolpost_chain (killed 15:05 via 620; original 12:38 chain kept). koleval3 48452849 (random trio main+energy) running since 14:37.
+- 14:54 std (lm-eval local-completions) failed: lmeval env lacked `tenacity` (lm-eval[api]) → installed tenacity+aiohttp, `local-completions` import OK. Chain's next koleval3 round re-runs std only.
+- 16:10 **Kolibri random trio main (manual evaluate, kolibri/eval/tmp/)**: s1 .409 / s2 .450 / s3 .390 → **.416±.031** (base .079); worst lang .365/.417/.344; views all ~.33–.43 except counterfactual .09–.18, boundary .85–.97; ~134 tok. Comparable to Qwen3-32B v4c .407 and GLM-5.3 reference .417.
+  Energy (S/K): raw ≈ base (.468–.478 / .554–.580 vs .476/.548); chat S .490–.495 (base .489), chat K .591–.612 (base .537).
+- Kolibri jobs blocked from acc_debug by user's alife-a4b jobs (submit quota); chains retrying (std re-run for random trio, v4c merge/eval, kolbase std).
+- 17:15 **Kolibri base std** (lm-eval local-completions via Kolibri vLLM, job 48458517): Belebele12 .578, GMMLU-Lite8 .487 (en .673, de .623, es .458, it .478, fr .443, pt .445, zh .420, ar .355), MGSM6 flex .797 / strict .772. Per-language profile matches an EN/DE-focused, small-active-parameter MoE (top-6/384 experts, hidden 2560) rather than a backend fault. `stdbench/aggregate_env.py` + `models_kol.txt` → `stdbench_kol.csv`.
+- 19:15 Kolibri random std (48462264): Belebele .577/.576/.522 → .558±.031 (base .578); GMMLU .456/.475/.466 → .465±.010 (base .487); MGSM strict .757/.771/.809 → .779±.027 (base .772). Mild MC regression (s3 Belebele −.056), MGSM flat. v4c trio merged (48463349, 5:48); v4c eval waiting for acc_debug slot (alife-a4b-s2 running).
+
+## 2026-11-03 21:00 — **Kolibri-1 complete (KOLPOST DONE 20:50)**
+- Main (contrastforge compare vs kolbase .079, paired group bootstrap): random .409/.450/.390 → **.416±.031** (Δ .330 [.131,.546] / .371 [.165,.587] / .312 [.134,.517]); v4c .361/.467/.415 → **.414±.053** (Δ .283 [.111,.470] / .389 [.184,.602] / .337 [.152,.534]). All 6 significant; random ≈ v4c. Worst lang random .344–.417, v4c .292–.406. Report: kolibri/eval/cmp_kol.json.
+- Energy (sig/kol_energy_boot.py, problem-cluster bootstrap vs base): raw S/K base .476/.548; random .472±.005/.570±.014 (n.s.); v4c .511±.021/.660±.043 (all seeds sig.). Chat base .489/.537; random .493±.003/.605±.012 (K sig.); **v4c .578±.010/.791±.021** (dS +.08–.09, dK +.24–.28, all sig.).
+- Std (lm-eval local-completions): base .578/.487/.772 (Belebele/GMMLU/MGSM strict); random .558±.031/.465±.010/.779±.027; **v4c .631±.009/.486±.004/.784±.007** (Belebele +.05 over base).
+- Pattern matches Qwen3-32B/GLM: main gain shared by both mixes; v4c adds energy-benchmark reasoning and preserves/improves standard benchmarks, random slightly erodes MC.

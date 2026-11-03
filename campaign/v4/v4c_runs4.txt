@@ -1,0 +1,5 @@
+phi4_s1|phi-4|curriculaphi4/mined|configs/vphi4_mined.json|1
+phi4_s2|phi-4|curriculaphi4/mined|configs/vphi4_mined.json|2
+phi4_s3|phi-4|curriculaphi4/mined|configs/vphi4_mined.json|3
+aya_own_s2|aya-expanse-8b|curriculaaya/mined|configs/v4c_aya_own_s1.json|2
+aya_own_s3|aya-expanse-8b|curriculaaya/mined|configs/v4c_aya_own_s1.json|3

@@ -43,8 +43,10 @@ contrastforge train --config configs/v4c_8b_s1.json [--resume latest]
 ```
 
 One GPU per arm (bf16 LoRA r16/α32, micro-batch 1 × 32 accumulation, lr 1e-4, 1 epoch); Qwen3-32B uses
-4-bit QLoRA (`v32b_*`), GLM-4.7-Flash 2 GPUs per arm (`vglm_*`). Slurm chains in `campaign/chains/`
-(e.g. `q32_chain.sh`, `glm_chain.sh`) resubmit 2-hour jobs until `metrics.json` exists.
+4-bit QLoRA (`v32b_*`), GLM-4.7-Flash 2 GPUs per arm (`vglm_*`), Kolibri-1 four GPUs per arm (`vkol_*`). Seeds 2–3 use the `_s2`/`_s3`
+configs. Slurm chains in `campaign/chains/` (e.g. `q32_chain.sh`, `glm_chain.sh`, `master_1101.sh`,
+`kolsft_chain.sh`) resubmit 2-hour jobs until `metrics.json` exists. Kolibri-1 adapters are merged with
+`campaign/kolibri/merge_lora.py` and evaluated by `campaign/kolibri/serve_eval.sh` (`kolpost_chain.sh`).
 
 ## 4. Evaluation on ProbeForge
 
@@ -64,8 +66,10 @@ shard prompts with `--only-ids` (`campaign/q32/remaining.py`).
   `eval_chat.py` (chat template), problems in `data/energybench_langs/`; key-value match with
   `campaign/energybench/answer_acc.py`.
 * Belebele / Global-MMLU-Lite / MGSM: `campaign/stdbench/node_std.sh` (task lists `tasklist.txt`, models
-  `models.txt`), aggregated by `campaign/stdbench/aggregate.py`.
-* Significance tables: `campaign/sig/sig.py`.
+  `models.txt`), aggregated by `campaign/stdbench/aggregate.py` (Kolibri-1: `aggregate_env.py` with
+  `MODELS=models_kol.txt`, results from the `local-completions` backend).
+* Significance tables: `campaign/sig/sig.py`; per-seed paired energy intervals: `campaign/sig/r4_energy.py`,
+  `campaign/sig/kol_energy_boot.py` (outputs in `results/sig/*_bootstrap.txt`).
 
 ## 6. Tables and figures
 

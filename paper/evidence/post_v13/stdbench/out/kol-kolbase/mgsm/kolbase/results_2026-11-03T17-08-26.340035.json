@@ -1,0 +1,604 @@
+{
+  "results": {
+    "mgsm_native_cot_de": {
+      "alias": "mgsm_native_cot_de",
+      "exact_match,strict-match": 0.7,
+      "exact_match_stderr,strict-match": 0.029040893477575862,
+      "exact_match,flexible-extract": 0.756,
+      "exact_match_stderr,flexible-extract": 0.027217995464553175
+    },
+    "mgsm_native_cot_en": {
+      "alias": "mgsm_native_cot_en",
+      "exact_match,strict-match": 0.88,
+      "exact_match_stderr,strict-match": 0.02059360059683995,
+      "exact_match,flexible-extract": 0.892,
+      "exact_match_stderr,flexible-extract": 0.01966955938156875
+    },
+    "mgsm_native_cot_es": {
+      "alias": "mgsm_native_cot_es",
+      "exact_match,strict-match": 0.728,
+      "exact_match_stderr,strict-match": 0.028200088296310002,
+      "exact_match,flexible-extract": 0.796,
+      "exact_match_stderr,flexible-extract": 0.025537121574548176
+    },
+    "mgsm_native_cot_fr": {
+      "alias": "mgsm_native_cot_fr",
+      "exact_match,strict-match": 0.772,
+      "exact_match_stderr,strict-match": 0.02658743248726848,
+      "exact_match,flexible-extract": 0.772,
+      "exact_match_stderr,flexible-extract": 0.02658743248726848
+    },
+    "mgsm_native_cot_ru": {
+      "alias": "mgsm_native_cot_ru",
+      "exact_match,strict-match": 0.8,
+      "exact_match_stderr,strict-match": 0.02534897002097908,
+      "exact_match,flexible-extract": 0.768,
+      "exact_match_stderr,flexible-extract": 0.026750070374865164
+    },
+    "mgsm_native_cot_zh": {
+      "alias": "mgsm_native_cot_zh",
+      "exact_match,strict-match": 0.752,
+      "exact_match_stderr,strict-match": 0.027367497504863555,
+      "exact_match,flexible-extract": 0.8,
+      "exact_match_stderr,flexible-extract": 0.025348970020979078
+    }
+  },
+  "group_subtasks": {
+    "mgsm_native_cot_de": [],
+    "mgsm_native_cot_en": [],
+    "mgsm_native_cot_es": [],
+    "mgsm_native_cot_fr": [],
+    "mgsm_native_cot_ru": [],
+    "mgsm_native_cot_zh": []
+  },
+  "configs": {
+    "mgsm_native_cot_de": {
+      "task": "mgsm_native_cot_de",
+      "tag": "mgsm_cot_native",
+      "dataset_path": "juletxara/mgsm",
+      "dataset_name": "de",
+      "training_split": "train",
+      "test_split": "test",
+      "doc_to_text": "{% if answer is not none %}{{question+\"\\nSchritt-für-Schritt-Antwort:\"}}{% else %}{{\"Frage: \"+question+\"\\nSchritt-für-Schritt-Antwort:\"}}{% endif %}",
+      "doc_to_target": "{% if answer is not none %}{{answer[29:]}}{% else %}{{answer_number|string}}{% endif %}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 8,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "until": [
+          "Frage:",
+          "</s>",
+          "<|im_end|>"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "Die Antwort lautet (\\-?[0-9\\.\\,]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "strict-match"
+        },
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "flexible-extract"
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 4.0,
+        "model": "kolbase",
+        "base_url": "http://localhost:8400/v1/completions",
+        "tokenizer": "/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16",
+        "num_concurrent": 16,
+        "max_retries": 3,
+        "max_length": 4096,
+        "seed": 1234
+      }
+    },
+    "mgsm_native_cot_en": {
+      "task": "mgsm_native_cot_en",
+      "tag": "mgsm_cot_native",
+      "dataset_path": "juletxara/mgsm",
+      "dataset_name": "en",
+      "training_split": "train",
+      "test_split": "test",
+      "doc_to_text": "{% if answer is not none %}{{question+\"\\nStep-by-Step Answer:\"}}{% else %}{{\"Question: \"+question+\"\\nStep-by-Step Answer:\"}}{% endif %}",
+      "doc_to_target": "{% if answer is not none %}{{answer[21:]}}{% else %}{{answer_number|string}}{% endif %}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 8,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "until": [
+          "Question:",
+          "</s>",
+          "<|im_end|>"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "The answer is (\\-?[0-9\\.\\,]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "strict-match"
+        },
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "flexible-extract"
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 4.0,
+        "model": "kolbase",
+        "base_url": "http://localhost:8400/v1/completions",
+        "tokenizer": "/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16",
+        "num_concurrent": 16,
+        "max_retries": 3,
+        "max_length": 4096,
+        "seed": 1234
+      }
+    },
+    "mgsm_native_cot_es": {
+      "task": "mgsm_native_cot_es",
+      "tag": "mgsm_cot_native",
+      "dataset_path": "juletxara/mgsm",
+      "dataset_name": "es",
+      "training_split": "train",
+      "test_split": "test",
+      "doc_to_text": "{% if answer is not none %}{{question+\"\\nRespuesta paso a paso:\"}}{% else %}{{\"Pregunta: \"+question+\"\\nRespuesta paso a paso:\"}}{% endif %}",
+      "doc_to_target": "{% if answer is not none %}{{answer[23:]}}{% else %}{{answer_number|string}}{% endif %}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 8,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "until": [
+          "Pregunta:",
+          "</s>",
+          "<|im_end|>"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "La respuesta es (\\-?[0-9\\.\\,]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "strict-match"
+        },
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "flexible-extract"
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 4.0,
+        "model": "kolbase",
+        "base_url": "http://localhost:8400/v1/completions",
+        "tokenizer": "/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16",
+        "num_concurrent": 16,
+        "max_retries": 3,
+        "max_length": 4096,
+        "seed": 1234
+      }
+    },
+    "mgsm_native_cot_fr": {
+      "task": "mgsm_native_cot_fr",
+      "tag": "mgsm_cot_native",
+      "dataset_path": "juletxara/mgsm",
+      "dataset_name": "fr",
+      "training_split": "train",
+      "test_split": "test",
+      "doc_to_text": "{% if answer is not none %}{{question+\"\\nRéponse étape par étape :\"}}{% else %}{{\"Question : \"+question+\"\\nRéponse étape par étape :\"}}{% endif %}",
+      "doc_to_target": "{% if answer is not none %}{{answer[26:]}}{% else %}{{answer_number|string}}{% endif %}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 8,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "until": [
+          "Question :",
+          "</s>",
+          "<|im_end|>"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "La réponse est (\\-?[0-9\\.\\,]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "strict-match"
+        },
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "flexible-extract"
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 4.0,
+        "model": "kolbase",
+        "base_url": "http://localhost:8400/v1/completions",
+        "tokenizer": "/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16",
+        "num_concurrent": 16,
+        "max_retries": 3,
+        "max_length": 4096,
+        "seed": 1234
+      }
+    },
+    "mgsm_native_cot_ru": {
+      "task": "mgsm_native_cot_ru",
+      "tag": "mgsm_cot_native",
+      "dataset_path": "juletxara/mgsm",
+      "dataset_name": "ru",
+      "training_split": "train",
+      "test_split": "test",
+      "doc_to_text": "{% if answer is not none %}{{question+\"\\nПошаговоерешение:\"}}{% else %}{{\"Задача: \"+question+\"\\nПошаговоерешение:\"}}{% endif %}",
+      "doc_to_target": "{% if answer is not none %}{{answer[18:]}}{% else %}{{answer_number|string}}{% endif %}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 8,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "until": [
+          "Задача:",
+          "</s>",
+          "<|im_end|>"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "Ответ — (\\-?[0-9\\.\\,]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "strict-match"
+        },
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "flexible-extract"
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 4.0,
+        "model": "kolbase",
+        "base_url": "http://localhost:8400/v1/completions",
+        "tokenizer": "/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16",
+        "num_concurrent": 16,
+        "max_retries": 3,
+        "max_length": 4096,
+        "seed": 1234
+      }
+    },
+    "mgsm_native_cot_zh": {
+      "task": "mgsm_native_cot_zh",
+      "tag": "mgsm_cot_native",
+      "dataset_path": "juletxara/mgsm",
+      "dataset_name": "zh",
+      "training_split": "train",
+      "test_split": "test",
+      "doc_to_text": "{% if answer is not none %}{{question+\"\\n逐步解答:\"}}{% else %}{{\"问题： \"+question+\"\\n逐步解答:\"}}{% endif %}",
+      "doc_to_target": "{% if answer is not none %}{{answer[6:]}}{% else %}{{answer_number|string}}{% endif %}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 8,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false,
+        "until": [
+          "问题：",
+          "</s>",
+          "<|im_end|>"
+        ]
+      },
+      "repeats": 1,
+      "filter_list": [
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "答案是 (\\-?[0-9\\.\\,]+)。"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "strict-match"
+        },
+        {
+          "filter": [
+            {
+              "function": "regex",
+              "group_select": -1,
+              "regex_pattern": "(-?[$0-9.,]{2,})|(-?[0-9]+)"
+            },
+            {
+              "function": "take_first"
+            }
+          ],
+          "name": "flexible-extract"
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 4.0,
+        "model": "kolbase",
+        "base_url": "http://localhost:8400/v1/completions",
+        "tokenizer": "/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16",
+        "num_concurrent": 16,
+        "max_retries": 3,
+        "max_length": 4096,
+        "seed": 1234
+      }
+    }
+  },
+  "versions": {
+    "mgsm_native_cot_de": 4.0,
+    "mgsm_native_cot_en": 4.0,
+    "mgsm_native_cot_es": 4.0,
+    "mgsm_native_cot_fr": 4.0,
+    "mgsm_native_cot_ru": 4.0,
+    "mgsm_native_cot_zh": 4.0
+  },
+  "n-shot": {
+    "mgsm_native_cot_de": 8,
+    "mgsm_native_cot_en": 8,
+    "mgsm_native_cot_es": 8,
+    "mgsm_native_cot_fr": 8,
+    "mgsm_native_cot_ru": 8,
+    "mgsm_native_cot_zh": 8
+  },
+  "higher_is_better": {
+    "mgsm_native_cot_de": {
+      "exact_match": true
+    },
+    "mgsm_native_cot_en": {
+      "exact_match": true
+    },
+    "mgsm_native_cot_es": {
+      "exact_match": true
+    },
+    "mgsm_native_cot_fr": {
+      "exact_match": true
+    },
+    "mgsm_native_cot_ru": {
+      "exact_match": true
+    },
+    "mgsm_native_cot_zh": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "mgsm_native_cot_zh": {
+      "original": 250,
+      "effective": 250
+    },
+    "mgsm_native_cot_ru": {
+      "original": 250,
+      "effective": 250
+    },
+    "mgsm_native_cot_fr": {
+      "original": 250,
+      "effective": 250
+    },
+    "mgsm_native_cot_es": {
+      "original": 250,
+      "effective": 250
+    },
+    "mgsm_native_cot_en": {
+      "original": 250,
+      "effective": 250
+    },
+    "mgsm_native_cot_de": {
+      "original": 250,
+      "effective": 250
+    }
+  },
+  "config": {
+    "model": "local-completions",
+    "model_args": "model=kolbase,base_url=http://localhost:8400/v1/completions,tokenizer=/gpfs/scratch/bsc21/bsc021885/cf/models/Kolibri-1-BF16,num_concurrent=16,max_retries=3,max_length=4096,seed=1234",
+    "batch_size": "1",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 1234,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1793721509.2148755,
+  "pretty_env_info": "PyTorch version: 2.13.0+cu130\nIs debug build: False\nCUDA used to build PyTorch: 13.0\nROCM used to build PyTorch: N/A\n\nOS: Red Hat Enterprise Linux 9.6 (Plow) (x86_64)\nGCC version: (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: glibc-2.34\n\nPython version: 3.12.10 | packaged by conda-forge | (main, Apr 10 2025, 22:21:13) [GCC 13.3.0] (64-bit runtime)\nPython platform: Linux-5.14.0-687.25.1.el9_8.x86_64-x86_64-with-glibc2.34\nIs CUDA available: True\nCUDA runtime version: Could not collect\nCUDA_MODULE_LOADING set to: \nGPU models and configuration: \nGPU 0: NVIDIA H100\nGPU 1: NVIDIA H100\nGPU 2: NVIDIA H100\nGPU 3: NVIDIA H100\n\nNvidia driver version: 595.91.07\ncuDNN version: Could not collect\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: False\nCaching allocator config: N/A\n\nCPU:\nArchitecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  160\nOn-line CPU(s) list:                     0-159\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Platinum 8460Y+\nCPU family:                              6\nModel:                                   143\nThread(s) per core:                      2\nCore(s) per socket:                      40\nSocket(s):                               2\nStepping:                                8\nCPU(s) scaling MHz:                      98%\nCPU max MHz:                             3700.0000\nCPU min MHz:                             800.0000\nBogoMIPS:                                4000.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 intel_ppin cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect user_shstk avx_vnni avx512_bf16 wbnoinvd dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req hfi vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               3.8 MiB (80 instances)\nL1i cache:                               2.5 MiB (80 instances)\nL2 cache:                                160 MiB (80 instances)\nL3 cache:                                210 MiB (2 instances)\nNUMA node(s):                            4\nNUMA node0 CPU(s):                       0-19,80-99\nNUMA node1 CPU(s):                       20-39,100-119\nNUMA node2 CPU(s):                       40-59,120-139\nNUMA node3 CPU(s):                       60-79,140-159\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Vulnerable\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n\nVersions of relevant libraries:\n[pip3] nccl-extensions==0.1.0\n[pip3] nccl4py==0.6.0\n[pip3] numpy==2.3.5\n[pip3] nvidia-cublas==13.1.1.3\n[pip3] nvidia-cuda-cupti==13.0.85\n[pip3] nvidia-cuda-nvrtc==13.0.88\n[pip3] nvidia-cuda-runtime==13.0.96\n[pip3] nvidia-cudnn-cu13==9.20.0.48\n[pip3] nvidia-cudnn-frontend==1.31.0\n[pip3] nvidia-cufft==12.0.0.61\n[pip3] nvidia-curand==10.4.0.35\n[pip3] nvidia-cusolver==12.0.4.66\n[pip3] nvidia-cusparse==12.6.3.3\n[pip3] nvidia-cusparselt-cu13==0.8.1\n[pip3] nvidia-nccl-cu13==2.29.7\n[pip3] nvidia-nvjitlink==13.4.92\n[pip3] nvidia-nvtx==13.0.85\n[pip3] nvtx==0.2.15\n[pip3] tokenspeed-triton==3.9.10.post20261008\n[pip3] torch==2.13.0\n[pip3] torch_c_dlpack_ext==0.1.5\n[pip3] torchaudio==2.11.0\n[pip3] torchcodec==0.17.0\n[pip3] torchvision==0.28.0\n[pip3] triton==3.7.1\n[conda] Could not collect",
+  "transformers_version": "5.19.0",
+  "lm_eval_version": "0.4.9.1",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "127901"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "127906"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 127906,
+  "max_length": 4095,
+  "task_hashes": {
+    "mgsm_native_cot_zh": "2ee614124df1fead45de4441d88921904f2e76b1b003b67ad08b7a959d291eb3",
+    "mgsm_native_cot_ru": "579ec27b9515d9db1c733e5a0bd7573d370cd51161d26e8a2d34c7800c2df905",
+    "mgsm_native_cot_fr": "2b320b39f0a0cd8f42e794be1f8ec01fe48c3d04a8b356960655906f00ae5de5",
+    "mgsm_native_cot_es": "ffa14581333d960b60833b1daaaaa1b537f5b09240e24cd902ffbd5e25ef2408",
+    "mgsm_native_cot_en": "8ffbd91fea3b747f6cb29f2537144ed5c577a858eab7ea960a4ecacc59d244b3",
+    "mgsm_native_cot_de": "9b1841486687ed4dc5fdc8910643d928f833263138293da6d99b6ef11ae80969"
+  },
+  "model_source": "local-completions",
+  "model_name": "kolbase",
+  "model_name_sanitized": "kolbase",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 2353013.720088094,
+  "end_time": 2353620.994754661,
+  "total_evaluation_time_seconds": "607.2746665668674"
+}

@@ -9,8 +9,10 @@
     "Review follow-up: extended analyze_paired.py passed for six additional main-test sets",
     "analyze_glm53_diagnostics.py passed (main hashes, thinking counts, failure classification)",
     "Rebuilt and visually checked 21 pages after follow-up",
-    "Final wording clarification: percentages and root-language denominator; 21 pages and no new build warnings"
+    "Final wording clarification: percentages and root-language denominator; 21 pages and no new build warnings",
+    "Final repository updated to drdecurto/probeforge in manuscript and clean sources; isolated build matches all 21 pages.",
+    "Figure 6 reduced from 0.76 to 0.64 text width in manuscript and clean source; rebuilt and visually checked; 21 pages."
   ],
   "new_main_prompts_checked": 7488,
-  "pdf_sha256": "310ddd71c8892257da72c0ee49b9ab3aa791904adb4b2b8136121c87814c4141"
+  "pdf_sha256": "b7c635f5ee560655b92e943da42e1318396430a6f3be129974cf24a4fd926796"
 }

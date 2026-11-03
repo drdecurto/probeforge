@@ -2,7 +2,7 @@ ProbeForge / ContrastForge
 Copyright (c) 2026 J. de Curtò and I. de Zarzà. Code and authored data are released under the MIT License.
 
 No model weights or adapters are distributed in this repository. Base checkpoints used in the study
-(Qwen3-8B/14B/32B, Phi-4, Phi-4-mini-instruct, Aya-Expanse-8B, GLM-4.7-Flash, GLM-5.3, Muse-Spark-Open and the
+(Qwen3-8B/14B/32B, Phi-4, Phi-4-mini-instruct, Aya-Expanse-8B, GLM-4.7-Flash, Kolibri-1, GLM-5.3, Muse-Spark-Open and the
 comparison checkpoints) remain subject to their own licenses and terms.
 
 Third-party data:

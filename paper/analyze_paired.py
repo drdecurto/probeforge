@@ -48,3 +48,7 @@ for name,rs in groups:
  t.append(name+' & '+' & '.join(cells)+r'\\')
 t +=[r'\bottomrule\end{tabular}',r'\end{table}'];(P/'tables/paired.tex').write_text('\n'.join(t)+'\n')
 print('\n'.join(t))
+
+# Preserve v14 extension rows after regenerating the legacy paired evidence.
+import subprocess, sys
+subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "refresh_v14_tables.py")], check=True)
