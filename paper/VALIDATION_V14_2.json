@@ -1,0 +1,13 @@
+{
+  "pages": 22,
+  "experimental_tables_and_figures_unchanged": true,
+  "clean_source_pdf_text_matches": true,
+  "undefined_references": false,
+  "overfull_boxes": [
+    "Overfull \\hbox (9.2679pt too wide) in paragraph at lines 38--38",
+    "Overfull \\hbox (9.2679pt too wide) in paragraph at lines 38--38"
+  ],
+  "split_audit": "SPLIT_AUDIT_V14_2.json",
+  "main_pdf_sha256": "286d21f8a0d42eaf7ea2d1eb9ac642a3a15ca3bfb2b16c314a050a6cec443416",
+  "wording_update": "Split-audit sentence rephrased; content and findings unchanged."
+}

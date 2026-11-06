@@ -1,0 +1,56 @@
+{
+  "train": {
+    "rows": 21671,
+    "roots": 200,
+    "families": [
+      "affine",
+      "energy",
+      "mean",
+      "product",
+      "rate",
+      "variance"
+    ],
+    "source": "<repository>/data/contrast13m_200/train.jsonl",
+    "sha256": "7306162bc11c4ddc473ae3f7d40d7ed0eb45923a8acde6d765e554adfeb908bc"
+  },
+  "validation": {
+    "rows": 4160,
+    "roots": 40,
+    "families": [
+      "rectangle",
+      "system",
+      "workrate"
+    ],
+    "source": "<repository>/data/contrast13m_200/validation.jsonl",
+    "sha256": "b539dcb3c944683eb2ab676fcf293f010d4c361a8f97ad40b87523adfaef6da3"
+  },
+  "test_eval12": {
+    "rows": 1248,
+    "roots": 12,
+    "families": [
+      "interest",
+      "journey",
+      "production"
+    ],
+    "source": "<repository>/data/contrast13m_200/test_eval12.jsonl",
+    "sha256": "14f56ea9546f4bcde9559717538fe39f5b47cd80a857b73360f9147a30a7a226"
+  },
+  "train__validation": {
+    "id": 0,
+    "group_id": 0,
+    "semantic_id": 0,
+    "prompt": 0
+  },
+  "train__test_eval12": {
+    "id": 0,
+    "group_id": 0,
+    "semantic_id": 0,
+    "prompt": 0
+  },
+  "validation__test_eval12": {
+    "id": 0,
+    "group_id": 0,
+    "semantic_id": 0,
+    "prompt": 0
+  }
+}

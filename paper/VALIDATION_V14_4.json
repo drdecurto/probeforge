@@ -1,0 +1,14 @@
+{
+  "version": "v14_4",
+  "pages": 23,
+  "existing_experimental_tables_unchanged": true,
+  "bibliography_unchanged": true,
+  "new_table": "Evaluation map",
+  "clean_source_pdf_text_matches": true,
+  "source_files": 89,
+  "visual_review": "All pages inspected; evaluation map checked separately. Only the two existing title-block overfull warnings.",
+  "repository_status": "Author confirms private; will be public before submission.",
+  "pdf_sha256": "566c036caf702312c517f4e10efe8f634c159a18d09c6726c4eed7e3ec32d74d",
+  "latest_change": "Labels renamed to fgr:/sn:/t:/e:, figures directory to drcoyz, numbered figure filenames stripped of fig prefix.",
+  "pdf_text_identical_to_previous": true
+}

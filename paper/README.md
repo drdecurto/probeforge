@@ -33,3 +33,10 @@ formats and are superseded by `refresh_v12.py`.
 | `tables/`, `figures/` | The LaTeX tables and figure files used in the accompanying study. |
 | `VALIDATION_*.json`, `provenance.json` | Validation records and provenance of the table and figure build. |
 | `make_figures_v08.py`, `sig.py`, `audit_round15.py` | Earlier generators and the round-15 audit, kept for provenance. |
+
+### Manuscript clarity revisions (v14_2, v14_4; no new experiments)
+- `tables/` now matches manuscript v14_4: captions clarified, labels renamed (`t:`), and the new `evaluation_map.tex` (origin, size, languages, purpose/RQ and results location of every evaluation set). `analyze_paired.py` and `refresh_v14_tables.py` write the same labels.
+- Split audit (v14_2): `python3 audit_splits.py` checks the archived train (200 roots), validation (40 roots) and main-test (12 roots) splits in `../data/contrast13m_200` for overlap in example IDs, root IDs, semantic IDs and exact prompts (zero in all three pairs). `evidence/split_audit/SPLIT_AUDIT_V14_2.json` records rows, roots, families and SHA-256 of the audited files; `evidence/split_audit/curriculum.py` is the curriculum code that refuses test/diagnostic inputs. This is a split-leakage check, not a pretraining-contamination audit.
+- `evidence/pack_documentation/` holds the manifests of the generated evaluation-only packs (core60/diag60 and the development112 coverage extension).
+- `VALIDATION_V14_2.json`, `VALIDATION_V14_4.json`: build checks of the two revisions (all experimental values unchanged).
+

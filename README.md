@@ -3,7 +3,8 @@
 Verified multilingual contrast post-training
 
 
-ProbeForge/ContrastForge generates mathematical *problem worlds* with exact rational solvers, renders each
+ProbeForge is the integrated post-training and evaluation system; ContrastForge (`src/contrastforge`) is its
+component for multilingual problem contrasts, exact verification and curriculum selection. Together they generate mathematical *problem worlds* with exact rational solvers, renders each
 world in 13 language configurations and eight *views* (answer-preserving rewrites, a missing-fact/infeasible
 boundary view and a counterfactual), verifies model responses exactly, and turns the same contrast groups into
 supervised training curricula (random, error-mined, status-diverse, mixed-format). The study adapts

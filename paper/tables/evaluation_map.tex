@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\caption{Evaluation map. Counts denote prompts or test items per checkpoint, before repeated generations. RQs identify the principal purpose; additional model-family comparisons reuse these sets.}
+\label{t:evalmap}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.15\textwidth}p{0.22\textwidth}p{0.13\textwidth}p{0.23\textwidth}p{0.17\textwidth}}
+\hline
+Set & Origin & Size; languages & Purpose & Results \\
+\hline
+Main test & Generated, held-out families & 1248; 13 & Gains, curriculum, language/view behavior (RQ1--RQ4) & Table~\ref{t:main}; Secs.~\ref{sn:languages}, \ref{sn:views}, \ref{sn:statuses}, \ref{sn:dpo} \\
+core60 & Generated, fresh roots in main-test families & 6240; 13 & More-root validation (RQ2) & Sec.~\ref{sn:diag} \\
+diag60 & Generated, diagnostic numerical constructions & 6240; 13 & Counterfactual/constraint behavior (RQ2) & Sec.~\ref{sn:diag} \\
+development112 & Generated, seven additional families & 1824; 2 & Family and protocol transfer (RQ4) & Sec.~\ref{sn:transfer} \\
+Thinking subsets & Main test / diag60 & 26 / 52; 13 & Reasoning-mode sensitivity (RQ5) & Sec.~\ref{sn:mixed} \\
+Energy-aware reasoning & Published benchmark~\cite{dezarza2026energy} & 1027; 13 & External reasoning and energy; 3 responses/item (RQ4) & Secs.~\ref{sn:energybench}, \ref{sn:formatresults}, \ref{sn:disciplines} \\
+Belebele & Published reading test~\cite{bandarkar2024belebele} & 10800; 12 & Reading transfer/retention (RQ4) & Secs.~\ref{sn:standard}, \ref{sn:formatresults} \\
+Global-MMLU-Lite & Published knowledge test~\cite{singh2025global} & 3200; 8 & Knowledge transfer/retention (RQ4) & Secs.~\ref{sn:standard}, \ref{sn:formatresults} \\
+MGSM & Published multilingual word problems~\cite{shi2022} & 1500; 6 & Mathematical transfer (RQ4) & Secs.~\ref{sn:standard}, \ref{sn:formatresults} \\
+\hline
+\end{tabular}
+\end{table*}

@@ -7,7 +7,7 @@ def cell(v,n=3,b=None):
  if b is not None and round(m,3)>round(b,3):t=r'\mathbf{'+t+'}'
  return '$'+t+(rf'\pm{s:.3f}' if n>1 else '')+'$'
 def line(r,b):return ' & '.join(cell(r[k],r['n'],b[k][0]) if not (r['model']=='Phi-4' and k=='out') else '---' for k in keys)+r'\\'
-t=[r'\begin{table*}[t]',r'\caption{Three-seed scale and architecture extensions. Adapted rows give means $\pm$ sample SD; bases are single evaluations. Main uses the same 1248 prompts; S and K follow Table~\ref{tab:replicated}, and MGSM uses strict extraction. Bold means exceed the matched base after rounding, not a significance threshold. Adaptation implementations differ; Kolibri also uses a different standard-benchmark backend.}\label{tab:scale}',r'\centering\scriptsize\setlength{\tabcolsep}{2.5pt}',r'\begin{tabular}{llccccccc}\toprule',r'Model & Curriculum & Main & Raw S & Chat S & Chat K & Belebele & GMMLU & MGSM\\\midrule']
+t=[r'\begin{table*}[t]',r'\caption{Three-seed scale and architecture extensions. Adapted rows give means $\pm$ sample SD; bases are single evaluations. Main uses the same 1248 prompts; S and K follow Table~\ref{t:replicated}, and MGSM uses strict extraction. Bold means exceed the matched base after rounding, not a significance threshold. Adaptation implementations differ; Kolibri also uses a different standard-benchmark backend.}\label{t:scale}',r'\centering\scriptsize\setlength{\tabcolsep}{2.5pt}',r'\begin{tabular}{llccccccc}\toprule',r'Model & Curriculum & Main & Raw S & Chat S & Chat K & Belebele & GMMLU & MGSM\\\midrule']
 for r in R[:9]:
  if r['arm']=='base':b=r
  t.append(r['model']+' & '+{'base':'Base','random':'Random','v4c':'Mixed-format'}[r['arm']]+' & '+line(r,b))
@@ -24,7 +24,7 @@ for r in R[9:]:
   s=s.replace('Phi-4-mini base',new+'\nPhi-4-mini base')
  else:s='\n'.join(new if l.startswith(label+' &') else l for l in s.splitlines())+'\n'
 p.write_text(s)
-t=[r'\begin{table}[tbp]',r'\caption{Kolibri-1 main-test accuracy by language (96 prompts each). Adapted columns average three seeds. All languages improve over base; the entries are descriptive, not independent language-level significance tests.}\label{tab:kolibri-languages}',r'\centering\footnotesize\setlength{\tabcolsep}{7pt}',r'\begin{tabular}{lccc}\toprule',r'Language & Base & Random & Mixed-format\\\midrule']
+t=[r'\begin{table}[tbp]',r'\caption{Kolibri-1 main-test accuracy by language (96 prompts each). Adapted columns average three seeds. All languages improve over base; the entries are descriptive, not independent language-level significance tests.}\label{t:kolibri-languages}',r'\centering\footnotesize\setlength{\tabcolsep}{7pt}',r'\begin{tabular}{lccc}\toprule',r'Language & Base & Random & Mixed-format\\\midrule']
 for l in ['en','de','es','ca','ar','lb','eu','fr','pt','it','ru','zh-cn','zh-tw']:
  t.append(l+' & '+' & '.join(f"{st.mean(a['languages'][l] for a in r['seeds']):.3f}" for r in R[6:9])+r'\\')
 t +=[r'\bottomrule\end{tabular}',r'\end{table}'];(P/'tables/kolibri_languages.tex').write_text('\n'.join(t)+'\n')
